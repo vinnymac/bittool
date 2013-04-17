@@ -98,7 +98,7 @@ public class MainActivity extends SherlockFragmentActivity {
 					}
 				}).show();
 		System.out.println("Hello Settings!");*/
-		Intent pref = new Intent("com.vinnymac.bittool.PREFERENCES");
+		Intent pref = new Intent("com.vinnymac.bittool.QUICKPREF");
 		startActivity(pref);
 	}
 
