@@ -15,5 +15,76 @@
         <item name="180">180</item>
         <item name="0">0</item>
     </string-array>
-
-</resources>
+    <string-array name="market">
+        <item name="mtgox">mtgox</item>
+        <item name="btce">btce</item>
+        <item name="bitstamp">bitstamp</item>
+        <item name="campbx">campbx</item>
+        <item name="bitcoincentral">bitcoincentral</item>
+    </string-array>
+    <string-array name="marketValues">
+        <item name="0">0</item>
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+    </string-array>
+    <string-array name="currency">
+        <item name="AUD">AUD</item>
+        <item name="CAD">CAD</item>
+        <item name="CHF">CHF</item>
+        <item name="DKK">DKK</item>
+        <item name="EUR">EUR</item>
+        <item name="GBP">GBP</item>
+        <item name="HKD">HKD</item>
+        <item name="JPY">JPY</item>
+        <item name="NZD">NZD</item>
+        <item name="PLN">PLN</item>
+        <item name="RUB">RUB</item>
+        <item name="SEK">SEK</item>
+        <item name="SGD">SGD</item>
+        <item name="THB">THB</item>
+        <item name="USD">USD</item>
+    </string-array>
+    <string-array name="currencyValues">
+        <item name="0">0</item>
+        <item name="1">1</item>
+        <item name="2">2</item>
+        <item name="3">3</item>
+        <item name="4">4</item>
+    </string-array>
+    <string-array name="mtgox">
+        <item name="AUD">AUD</item>
+        <item name="CAD">CAD</item>
+        <item name="CHF">CHF</item>
+        <item name="DKK">DKK</item>
+        <item name="EUR">EUR</item>
+        <item name="GBP">GBP</item>
+        <item name="HKD">HKD</item>
+        <item name="JPY">JPY</item>
+        <item name="NZD">NZD</item>
+        <item name="PLN">PLN</item>
+        <item name="RUB">RUB</item>
+        <item name="SEK">SEK</item>
+        <item name="SGD">SGD</item>
+        <item name="THB">THB</item>
+        <item name="USD">USD</item>
+    </string-array>
+    <string-array name="btce">
+        <item name="USD">USD</item>
+        <item name="RUR">RUR</item>
+        <item name="EUR">EUR</item>
+    </string-array>
+    <string-array name="bitstamp">
+        <item name="USD">USD</item>
+    </string-array>
+    <string-array name="campbx">
+        <item name="USD">USD</item>
+    </string-array>
+    <string-array name="bitcoincentral">
+        <item name="EUR">EUR</item>
+        <item name="USD">USD</item>
+        <item name="GBP">GBP</item>
+        <item name="CAD">CAD</item>
+    </string-array>
+</resources>

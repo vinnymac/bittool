@@ -82,9 +82,11 @@ public class Calc extends Fragment {
 		//textPrice = this.getArguments().getString("0");
 		// this.getArguments().putString("1", resultBTC.getText().toString());
 		
-		textPrice = ((MainActivity) getActivity()).getPrice();
-		textBTC = ((MainActivity) getActivity()).getBTC();
+		//textPrice = ((MainActivity) getActivity()).getPrice();
+		//textBTC = ((MainActivity) getActivity()).getBTC();
 		
+		textPrice = getActivity().getIntent().getExtras().getString("0");
+		textBTC = getActivity().getIntent().getExtras().getString("1");
 		
 
 		// EditText
@@ -316,6 +318,7 @@ public class Calc extends Fragment {
 		//this.setArguments(((MainActivity) getActivity()).args);
 		//((MainActivity) getActivity()).args.putString("1", resultBTC.getText().toString());
 		((MainActivity) getActivity()).setBTC(resultBTC.getText().toString());
+		
 
 	}
 

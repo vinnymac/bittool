@@ -17,5 +17,10 @@
     <string name="pref_user_name_summary">Set your username</string>
     <string name="pref_user_profile">User Profile</string>
     <string name="pref_update_setting">Update Settings</string>
+    
+    <string name="market">Update default Market</string>
+    <string name="market_summary">Set the Default Market</string>
+    <string name="currency">Update default Currency</string>
+    <string name="currency_summary">Set the Default Currency</string>
 
 </resources>

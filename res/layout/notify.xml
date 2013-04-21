@@ -4,6 +4,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Sends a notification when the price is reached"
+        android:layout_marginTop="10dp"
+        android:gravity="center" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -13,14 +22,14 @@
         <Button
             android:id="@+id/btnAdd"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:text="Add" />
 
         <Button
             android:id="@+id/btnEdit"
             style="?android:attr/buttonStyleSmall"
-            android:layout_width="wrap_content"
+            android:layout_width="115dp"
             android:layout_height="wrap_content"
             android:text="Edit" />
     </LinearLayout>

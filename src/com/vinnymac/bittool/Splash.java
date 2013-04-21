@@ -18,7 +18,13 @@ import android.util.Log;
 public class Splash extends Activity {
 
 	JSONContact jsonData = new JSONContact();
-	final static String URL = "https://www.bitstamp.net/api/ticker/";
+	
+	//Bitstamp Market
+	//final static String URL = "https://www.bitstamp.net/api/ticker/";
+	
+	//BTC-E Market https://btc-e.com/api/2/btc_usd/ticker
+	//CampBX Market http://campbx.com/api/xticker.php
+	//MTGox Market http://data.mtgox.com/api/1/BTCUSD/ticker
 
 	MediaPlayer ourSong;
 
@@ -29,7 +35,7 @@ public class Splash extends Activity {
 		setContentView(R.layout.splash);
 
 		// Gets latest JSON data from a site like bitstamp
-		final String bitstampArray = updateJSON(URL);
+		//final String bitstampArray = updateJSON(URL);
 
 		// Start sound, don't let it carry on to next class, below ContentView
 		ourSong = MediaPlayer.create(Splash.this, R.raw.splashsound);
@@ -53,7 +59,7 @@ public class Splash extends Activity {
 
 					Intent openMainActivity = new Intent(
 							"com.vinnymac.bittool.MAINACTIVITY");
-					openMainActivity.putExtra("bitstamp", bitstampArray);
+					//openMainActivity.putExtra("bitstamp", bitstampArray);
 					startActivity(openMainActivity);
 				}
 			}

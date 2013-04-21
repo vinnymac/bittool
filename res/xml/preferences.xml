@@ -2,12 +2,15 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
 
     <PreferenceCategory android:title="@string/pref_user_profile" >
+        
         <EditTextPreference
             android:key="prefUsername"
             android:summary="@string/pref_user_name_summary"
             android:title="@string/pref_user_name" />
+        
     </PreferenceCategory>
     <PreferenceCategory android:title="@string/pref_update_setting" >
+        
         <CheckBoxPreference
             android:defaultValue="false"
             android:key="prefSendReport"
@@ -21,6 +24,20 @@
             android:key="prefSyncFrequency"
             android:summary="@string/pref_sync_frequency_summary"
             android:title="@string/pref_sync_frequency" />
+        
+        <ListPreference
+            android:entries="@array/market"
+            android:entryValues="@array/marketValues"
+            android:key="market"
+            android:summary="@string/market_summary"
+            android:title="@string/market" />
+        
+        <ListPreference
+            android:entries="@array/currency"
+            android:entryValues="@array/currencyValues"
+            android:key="currency"
+            android:summary="@string/currency_summary"
+            android:title="@string/currency" />
     </PreferenceCategory>
 
 </PreferenceScreen>
