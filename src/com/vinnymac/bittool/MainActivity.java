@@ -17,11 +17,10 @@ import android.preference.PreferenceManager;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 
 public class MainActivity extends SherlockFragmentActivity {
-
-	Bundle args;
 
 	SharedPreferences prefs;
 
@@ -44,7 +43,7 @@ public class MainActivity extends SherlockFragmentActivity {
 
 		this.getIntent().putExtra("0", textPrice);
 		this.getIntent().putExtra("1", textBTC);
-		
+
 		mTabsAdapter = new TabsAdapter(this, mViewPager);
 		mTabsAdapter.addTab(bar.newTab().setText("Notify"), Notify.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText("Exchange"), Markets.class,
@@ -129,8 +128,5 @@ public class MainActivity extends SherlockFragmentActivity {
 		super.onResume();
 		mTabsAdapter.notifyDataSetChanged();
 	}
-	
-
-	
 
 }

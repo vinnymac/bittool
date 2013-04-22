@@ -15,7 +15,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class Calc extends Fragment {
-	//OnCalcSelectedListener mCallback;
+	// OnCalcSelectedListener mCallback;
 
 	public String str = "";
 	Button one, two, three, four, five, six, seven, eight, nine, clear, dot,
@@ -24,38 +24,35 @@ public class Calc extends Fragment {
 
 	Character op = 'q';
 	int i, num, numtemp;
-	private double total1 = 1.0;
+	private double btcTotal = 1.0;
+	private double price = -1.0;
+	
 	TextView resultUSD, resultBTC;
 
-	private String textPrice;
+	private String textPrice = "$ 0.00";
 	private String textBTC;
 
 	// double USD =
 	// this.getActivity().getIntent().getExtras().getDouble("asking");
-	
+
 	/*
-	public interface OnCalcSelectedListener {
-		public void updateData(String price, String btc);
-	}
-	
-	@Override
-	public void onAttach(Activity activity) {
-		// TODO Auto-generated method stub
-		super.onAttach(activity);
-		
-        // This makes sure that the container activity has implemented
-        // the callback interface. If not, it throws an exception
-        try {
-            mCallback = (OnCalcSelectedListener) activity;
-        } catch (ClassCastException e) {
-            throw new ClassCastException(activity.toString()
-                    + " must implement OnHeadlineSelectedListener");
-        }
-	}*/
+	 * public interface OnCalcSelectedListener { public void updateData(String
+	 * price, String btc); }
+	 * 
+	 * @Override public void onAttach(Activity activity) { // TODO
+	 * Auto-generated method stub super.onAttach(activity);
+	 * 
+	 * // This makes sure that the container activity has implemented // the
+	 * callback interface. If not, it throws an exception try { mCallback =
+	 * (OnCalcSelectedListener) activity; } catch (ClassCastException e) { throw
+	 * new ClassCastException(activity.toString() +
+	 * " must implement OnHeadlineSelectedListener"); } }
+	 */
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
 	}
 
 	@Override
@@ -68,37 +65,23 @@ public class Calc extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.calc, container, false);
-
-		/*
-		 * Bundle args = this.getArguments(); String textPrice = (String)
-		 * args.get("0"); System.out.println(textPrice);
-		 * 
-		 * args.putString("0", textPrice); this.setArguments(args);
-		 */
-
-		// Retrieve the string from the argument bundle that contains textBTC in
-		// main. This is used for fragment communication.
-		//textBTC = this.getArguments().getString("1");
-		//textPrice = this.getArguments().getString("0");
-		// this.getArguments().putString("1", resultBTC.getText().toString());
 		
-		//textPrice = ((MainActivity) getActivity()).getPrice();
-		//textBTC = ((MainActivity) getActivity()).getBTC();
+		initialize(view);
 		
-		textPrice = getActivity().getIntent().getExtras().getString("0");
-		textBTC = getActivity().getIntent().getExtras().getString("1");
-		
+		return view;
+	}
 
-		// EditText
+	private void initialize(View view) {
+		// TextViews
 		resultUSD = (TextView) view.findViewById(R.id.tvResult_USD);
 		resultBTC = (TextView) view.findViewById(R.id.tvResult_BTC);
 		
-		//textPrice = ((MainActivity) getActivity()).getPrice();
-		//textBTC = ((MainActivity) getActivity()).getBTC();
-		
+		textBTC = getActivity().getIntent().getStringExtra("1");
+		textPrice = ((MainActivity) getActivity()).getPrice();
+		// textBTC = ((MainActivity) getActivity()).getBTC();
+
 		resultUSD.setText(textPrice);
 		resultBTC.setText(textBTC);
-
 
 		// Buttons!
 		one = (Button) view.findViewById(R.id.Btn1_id);
@@ -123,7 +106,6 @@ public class Calc extends Fragment {
 		 * view.findViewById(R.id.Btndivide_id); multiply = (Button)
 		 * view.findViewById(R.id.Btnmulti_id);
 		 */
-
 		one.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -227,8 +209,24 @@ public class Calc extends Fragment {
 				// resultBTC.append(" BTC");
 			}
 		});
+	}
+	
+	@Override
+	public void setUserVisibleHint(boolean isVisibleToUser) {
+		super.setUserVisibleHint(isVisibleToUser);
 
-		return view;
+		// Make sure that we are currently visible
+		if (this.isVisible()) {
+			
+			textPrice = ((MainActivity) getActivity()).getPrice();
+			resultUSD.setText(textPrice);
+			
+			// If we are becoming invisible, then...
+			if (!isVisibleToUser) {
+				Log.d("Calculator", "Not visible anymore.  Stopping calculator.");
+				// TODO stop audio playback
+			}
+		}
 	}
 
 	/*
@@ -287,13 +285,22 @@ public class Calc extends Fragment {
 	 * public void btnclearClicked(View v) { reset(); }
 	 */
 
+	@Override
+	public void onResume() {
+		// TODO Auto-generated method stub
+		super.onResume();
+
+	}
+
 	private void reset() {
 		// TODO Auto-generated method stub
 		str = "";
 		op = 'q';
 		num = 0;
 		numtemp = 0;
-		resultBTC.setText("0 BTC");
+		resultBTC.setText("1 BTC");
+		resultUSD.setText("$ " + price);
+		//getActivity().getIntent().putExtra("1", resultBTC.getText().toString());
 	}
 
 	private void insert(int j) {
@@ -309,16 +316,23 @@ public class Calc extends Fragment {
 
 		// gets the resultBTC string, removes the BTC, and sets total1 to the
 		// double value.
-		total1 = Double.valueOf(temp).doubleValue();
-		Log.d("TOTAL1", "" + total1);
+		btcTotal = Double.valueOf(temp).doubleValue();
+		Log.d("btcTotal", "" + btcTotal);
 
 		resultBTC.setText(temp);
 		resultBTC.append(" BTC");
 		
-		//this.setArguments(((MainActivity) getActivity()).args);
-		//((MainActivity) getActivity()).args.putString("1", resultBTC.getText().toString());
-		((MainActivity) getActivity()).setBTC(resultBTC.getText().toString());
+		price = Double.valueOf(textPrice.replace("$ ", "")).doubleValue();
+		double newPrice = price * btcTotal;
+		resultUSD.setText("$ " + String.format("%.2f", newPrice));
 		
+
+		// this.setArguments(((MainActivity) getActivity()).args);
+		// ((MainActivity) getActivity()).args.putString("1",
+		// resultBTC.getText().toString());
+		// ((MainActivity)
+		// getActivity()).setBTC(resultBTC.getText().toString());
+		//getActivity().getIntent().putExtra("1", resultBTC.getText().toString());
 
 	}
 

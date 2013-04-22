@@ -52,6 +52,16 @@
         <item name="2">2</item>
         <item name="3">3</item>
         <item name="4">4</item>
+        <item name="5">5</item>
+        <item name="6">6</item>
+        <item name="7">7</item>
+        <item name="8">8</item>
+        <item name="9">9</item>
+        <item name="10">10</item>
+        <item name="11">11</item>
+        <item name="12">12</item>
+        <item name="13">13</item>
+        <item name="14">14</item>
     </string-array>
     <string-array name="mtgox">
         <item name="AUD">AUD</item>
@@ -87,4 +97,5 @@
         <item name="GBP">GBP</item>
         <item name="CAD">CAD</item>
     </string-array>
-</resources>
+
+</resources>

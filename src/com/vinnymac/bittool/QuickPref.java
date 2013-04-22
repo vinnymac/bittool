@@ -1,13 +1,16 @@
 package com.vinnymac.bittool;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 
-public class QuickPref extends PreferenceActivity {
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockPreferenceActivity;
+
+public class QuickPref extends SherlockPreferenceActivity {
 
 	private static int prefs = R.xml.preferences;
 
@@ -17,6 +20,10 @@ public class QuickPref extends PreferenceActivity {
 	@Override
 	protected void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+
+		getSupportActionBar().setHomeButtonEnabled(true);
+		ActionBar actionBar = getSupportActionBar();
+		actionBar.setDisplayHomeAsUpEnabled(true);
 
 		try {
 			getClass().getMethod("getFragmentManager");
@@ -29,7 +36,7 @@ public class QuickPref extends PreferenceActivity {
 	@SuppressWarnings("deprecation")
 	protected void AddResourceApiLessThan11() {
 		addPreferencesFromResource(prefs);
-		
+
 		market = (ListPreference) findPreference("market");
 		currency = (ListPreference) findPreference("currency");
 
@@ -38,8 +45,8 @@ public class QuickPref extends PreferenceActivity {
 					Object newValue) {
 				final String val = newValue.toString();
 				int index = market.findIndexOfValue(val);
-				
-				switch(index){
+
+				switch (index) {
 				case 0:
 					currency.setEntries(R.array.mtgox);
 					break;
@@ -59,10 +66,25 @@ public class QuickPref extends PreferenceActivity {
 					currency.setEnabled(false);
 					break;
 				}
-					
+
 				return true;
 			}
 		});
+	}
+
+	@Override
+	public boolean onOptionsItemSelected(
+			com.actionbarsherlock.view.MenuItem item) {
+		switch (item.getItemId()) {
+
+		case android.R.id.home:
+			// app icon in action bar clicked; go home
+			Intent mainIntent = new Intent(this, MainActivity.class);
+			mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+			startActivity(mainIntent);
+		default:
+			return super.onOptionsItemSelected(item);
+		}
 	}
 
 	@TargetApi(11)
@@ -94,8 +116,8 @@ public class QuickPref extends PreferenceActivity {
 						Object newValue) {
 					final String val = newValue.toString();
 					int index = market.findIndexOfValue(val);
-					
-					switch(index){
+
+					switch (index) {
 					case 0:
 						currency.setEntries(R.array.mtgox);
 						break;
@@ -115,7 +137,7 @@ public class QuickPref extends PreferenceActivity {
 						currency.setEnabled(false);
 						break;
 					}
-						
+
 					return true;
 				}
 			});

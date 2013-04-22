@@ -22,5 +22,7 @@
     <string name="market_summary">Set the Default Market</string>
     <string name="currency">Update default Currency</string>
     <string name="currency_summary">Set the Default Currency</string>
-
+    
+    <string name="sound">Startup Sound</string>
+	<string name="sound_summary">Turn the sound on or off.</string>
 </resources>
