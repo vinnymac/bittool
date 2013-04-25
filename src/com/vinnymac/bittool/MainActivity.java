@@ -4,6 +4,7 @@ import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.vinnymac.bittool.TabsAdapter.TabInfo;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -19,8 +20,11 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.util.Log;
+import android.view.View;
 
-public class MainActivity extends SherlockFragmentActivity {
+public class MainActivity extends SherlockFragmentActivity implements
+		Markets.Callbacks {
 
 	SharedPreferences prefs;
 
@@ -29,16 +33,22 @@ public class MainActivity extends SherlockFragmentActivity {
 
 	private ViewPager mViewPager;
 	private TabsAdapter mTabsAdapter;
+	private ActionBar bar;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+		initialize();
+	}
+
+	private void initialize() {
+		Bundle args = new Bundle();
 		mViewPager = new ViewPager(this);
 		mViewPager.setId(R.id.pager);
 		setContentView(mViewPager);
 
-		final ActionBar bar = getSupportActionBar();
+		bar = getSupportActionBar();
 		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
 		this.getIntent().putExtra("0", textPrice);
@@ -48,10 +58,12 @@ public class MainActivity extends SherlockFragmentActivity {
 		mTabsAdapter.addTab(bar.newTab().setText("Notify"), Notify.class, null);
 		mTabsAdapter.addTab(bar.newTab().setText("Exchange"), Markets.class,
 				null);
-		mTabsAdapter
-				.addTab(bar.newTab().setText("Calculate"), Calc.class, null);
+		mTabsAdapter.addTab(bar.newTab().setText("Calculate"), Calc.class, args);
 
 		mViewPager.setCurrentItem(1);
+
+		getSupportFragmentManager().beginTransaction().commit();
+
 	}
 
 	@Override
@@ -127,6 +139,34 @@ public class MainActivity extends SherlockFragmentActivity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		mTabsAdapter.notifyDataSetChanged();
+	}
+
+	public void onItemSelected(double id) {
+		//Bundle args = new Bundle();
+		 /*Bundle args = new Bundle(); args.putDouble(Markets.ARG_ASK_KEY, id);
+		 
+		 mTabsAdapter .addTab(bar.newTab().setText("Calculate"), Calc.class,
+		 args);*/
+		
+		System.out.println("Tag 0: " + mTabsAdapter.getTag(0));
+		System.out.println("Tag 1: " + mTabsAdapter.getTag(1));
+		System.out.println("Tag 2: " + mTabsAdapter.getTag(2));
+		 
+		Bundle args = mTabsAdapter.getTag(2).getArgs();
+
+		Log.d("ID in ACTIVITY: ", "" + id);
+		args.putDouble(Markets.ARG_ASK_KEY, id);
+		// ((Calc) mTabsAdapter.getItem(2)).setPrice(id);
+		/*
+		 //mViewPager.find
+		TabInfo tag = mTabsAdapter.getTag(2);
+		Calc frag = (Calc) getSupportFragmentManager().findFragmentByTag(tag.toString());
+		
+		 
+		 //Calc frag = (Calc) mTabsAdapter.getItem(2);
+		 frag.setArguments(args);*/
+		 
+		 
 	}
 
 }

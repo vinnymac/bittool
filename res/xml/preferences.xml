@@ -29,14 +29,14 @@
             android:summary="@string/pref_sync_frequency_summary"
             android:title="@string/pref_sync_frequency" />
         <ListPreference
-            android:defaultValue="mtgox"
+            android:defaultValue="2"
             android:entries="@array/market"
             android:entryValues="@array/marketValues"
             android:key="market"
             android:summary="@string/market_summary"
             android:title="@string/market" />
         <ListPreference
-            android:defaultValue="USD"
+            android:defaultValue="0"
             android:entries="@array/currency"
             android:entryValues="@array/currencyValues"
             android:key="currency"

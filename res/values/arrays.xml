@@ -30,6 +30,7 @@
         <item name="4">4</item>
     </string-array>
     <string-array name="currency">
+        <item name="USD">USD</item>
         <item name="AUD">AUD</item>
         <item name="CAD">CAD</item>
         <item name="CHF">CHF</item>
@@ -44,7 +45,6 @@
         <item name="SEK">SEK</item>
         <item name="SGD">SGD</item>
         <item name="THB">THB</item>
-        <item name="USD">USD</item>
     </string-array>
     <string-array name="currencyValues">
         <item name="0">0</item>
@@ -64,6 +64,7 @@
         <item name="14">14</item>
     </string-array>
     <string-array name="mtgox">
+        <item name="USD">USD</item>
         <item name="AUD">AUD</item>
         <item name="CAD">CAD</item>
         <item name="CHF">CHF</item>
@@ -78,7 +79,6 @@
         <item name="SEK">SEK</item>
         <item name="SGD">SGD</item>
         <item name="THB">THB</item>
-        <item name="USD">USD</item>
     </string-array>
     <string-array name="btce">
         <item name="USD">USD</item>
@@ -92,8 +92,8 @@
         <item name="USD">USD</item>
     </string-array>
     <string-array name="bitcoincentral">
-        <item name="EUR">EUR</item>
         <item name="USD">USD</item>
+        <item name="EUR">EUR</item>
         <item name="GBP">GBP</item>
         <item name="CAD">CAD</item>
     </string-array>

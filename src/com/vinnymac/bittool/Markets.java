@@ -49,7 +49,7 @@ public class Markets extends Fragment {
 
 	// Some Global ui values
 	TextView tvRate;
-	TextView tvBTC;
+	TextView tvChange;
 	TextView tvPrice;
 	TextView tvLow;
 	TextView tvHigh;
@@ -77,15 +77,22 @@ public class Markets extends Fragment {
 	boolean update = true;
 
 	// MARKET VARIABLES
-	JSONContact jsonData = new JSONContact();
+	// JSONContact jsonData = new JSONContact();
 
 	String ask = "No Market Data";
 
+	final static String ARG_ASK_KEY = "price";
+
 	double asking = -1.0; // USD Asking Price
 	double low = -1.0; // High of Exchange
+
 	double high = -1.0; // Low of Exchange
 	double volume = -1.0; // Volume of Exchange
 	double last = -1.0; // Last Price
+
+	private Tick ticker;
+
+	private Callbacks mCallbacks;
 
 	/*
 	 * double bitStampLow = -1.0; double bitStampHigh = -1.0; double
@@ -101,6 +108,32 @@ public class Markets extends Fragment {
 	 * dkk; // double rub; // double nzd; // double pln; // double sek; //
 	 * double sgd; // double thb;
 	 */
+
+	public interface Callbacks {
+		// Rename to onMarketUpdated later. Right now this will happen when the
+		// market data is downloaded.
+		public void onItemSelected(double id);
+	}
+
+	@Override
+	public void onAttach(Activity activity) {
+		// TODO Auto-generated method stub
+		super.onAttach(activity);
+		try {
+			mCallbacks = (Callbacks) activity;
+		} catch (ClassCastException ex) {
+			Log.e(getTag(),
+					"Casting the activity as a Callbacks listener failed" + ex);
+			mCallbacks = null;
+		}
+	}
+
+	public void onPriceUpdated(double price, int position) {
+		if (mCallbacks != null) {
+			mCallbacks.onItemSelected(price);
+		}
+	}
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -121,93 +154,25 @@ public class Markets extends Fragment {
 
 		update = isNetworkAvailable();
 
-		// Retrieve the string from the argument bundle that contains textBTC in
-		// main. This is used for fragment communication.
-		/*
-		 * textBTC = getActivity().getIntent().getExtras().getString("1");
-		 * 
-		 * if (!(textBTC == null || textBTC.equals(""))) { Log.d("huh?",
-		 * textBTC); } else { Log.d("SHIT", "SHIT"); }
-		 */
 		initialize(view);
-		LoadPreferences();
-		if (update) {
-
-			update = false;
-		}
-
-		addItemsOnspinCur();
-		// addListenerOnButton();
-
-		// This sets the Asking Price data from BitStamp
-		// tvPrice.setText("No Data");
-
-		// tvBTC.setText(this.getArguments().getString("1"));
-
-		// getActivity().getIntent().putExtra("asking", asking);
-
 		/*
-		 * 
-		 * // If -1.0 gets the data on start, and after never gets it. Could
-		 * change // to boolean on/off if (update) { // USDAsk();
-		 * 
-		 * asking = queryJSON("ask", "bitstamp"); asking =
-		 * RoundTo2Decimals(asking);
-		 * getActivity().getIntent().putExtra("asking", asking);
-		 * 
-		 * bitStampLow = queryJSON("low", "bitstamp"); bitStampHigh =
-		 * queryJSON("high", "bitstamp"); // bitStampYesterday = query(URL, "");
-		 * 
-		 * // bitFloorPrice = query("https://api.bitfloor.com/ticker/1", //
-		 * "price"); // bitFloorLow =
-		 * query("https://api.bitfloor.com/day-info/1", // "low"); //
-		 * bitFloorHigh = query("https://api.bitfloor.com/day-info/1", //
-		 * "high");
+		 * LoadPreferences(); if (update) {
 		 * 
 		 * update = false; }
-		 * 
-		 * tvPrice.setText("$ " + asking); tvLow.setText("Low: " + bitStampLow);
-		 * tvHigh.setText("High: " + bitStampHigh);
-		 * 
-		 * ((MainActivity)
-		 * getActivity()).setPrice(tvPrice.getText().toString());
-		 * 
-		 * // args.putString("0", tvPrice.getText().toString());
-		 * 
-		 * // Currency Conversion Buttons!
-		 * 
-		 * btnUSD.setOnClickListener(new View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View arg0) { tvPrice.setText("$ " +
-		 * asking); } });
-		 * 
-		 * btnEUR.setOnClickListener(new View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View arg0) { if (euro == -1.0) { euro =
-		 * currencyChange("EUR", tvRate); } tvPrice.setText("€ " + euro); } });
-		 * 
-		 * btnJPY.setOnClickListener(new View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View arg0) { if (yen == -1.0) { yen =
-		 * currencyChange("JPY", tvRate); } tvPrice.setText("¥ " + yen); } });
-		 * 
-		 * btnGBP.setOnClickListener(new View.OnClickListener() {
-		 * 
-		 * @Override public void onClick(View arg0) { if (pound == -1.0) { pound
-		 * = currencyChange("GBP", tvRate); } tvPrice.setText("£ " + pound); }
-		 * });
 		 */
 		return view;
 	}
 
 	private void initialize(View view) {
-		// textPrice = ((MainActivity) getActivity()).getPrice();
-		// textBTC = ((MainActivity) getActivity()).getBTC();
+
+		// Gets parceable data from Splash.
+		Bundle data = getActivity().getIntent().getExtras();
+		ticker = data.getParcelable("ticker");
 
 		// Setup buttons, views, etc
 		tvPrice = (TextView) view.findViewById(R.id.price);
-		tvBTC = (TextView) view.findViewById(R.id.tvBTC);
-		//tvRate = (TextView) view.findViewById(R.id.tv_Rate);
+		tvChange = (TextView) view.findViewById(R.id.tvChange);
+
 		tvLow = (TextView) view.findViewById(R.id.tvLow);
 		tvHigh = (TextView) view.findViewById(R.id.tvHigh);
 		tvLast = (TextView) view.findViewById(R.id.tvLast);
@@ -215,22 +180,48 @@ public class Markets extends Fragment {
 
 		marketID = (TextView) view.findViewById(R.id.tvMarketID);
 
-		// USD = (TextView) view.findViewById(R.id.USD);
-		// EUR = (TextView) view.findViewById(R.id.EUR);
+		// ///////*********THIS IS THE SETUP***********/////////
+		
+		SharedPreferences preferences = PreferenceManager
+				.getDefaultSharedPreferences(this.getActivity());
+		String market = preferences.getString("market", "0");
+		String[] marketNames = getResources().getStringArray(R.array.market);
+		int position = Integer.parseInt(market);
+		marketID.setText(marketNames[position]);
+		
 
-		//btnUSD = (Button) view.findViewById(R.id.btn_USD);
-		//btnEUR = (Button) view.findViewById(R.id.btn_EUR);
-		//btnJPY = (Button) view.findViewById(R.id.btn_JPY);
-		//btnGBP = (Button) view.findViewById(R.id.btn_GBP);
+		System.out.println("Success");
+		System.out.println(ticker.toString());
 
-		//spinCur = (Spinner) view.findViewById(R.id.spinCur);
+		asking = Double.parseDouble(ticker.getAsk().toString()
+				.replace("USD ", ""));
+		tvPrice.setText("$ " + String.format("%.2f", asking));
+
+		onPriceUpdated(asking, 0);
+
+		((MainActivity) getActivity()).setPrice(tvPrice.getText().toString());
+
+		low = Double
+				.parseDouble(ticker.getLow().toString().replace("USD ", ""));
+		tvLow.setText("Low: " + String.format("%.2f", low));
+
+		high = Double.parseDouble(ticker.getHigh().toString()
+				.replace("USD ", ""));
+		tvHigh.setText("High: " + String.format("%.2f", high));
+
+		last = Double.parseDouble(ticker.getLast().toString()
+				.replace("USD ", ""));
+		tvLast.setText("Last: " + String.format("%.2f", last));
+
+		volume = Double.parseDouble(ticker.getVolume().toString());
+		tvVolume.setText("Volume: " + String.format("%.2f", volume));
 
 	}
 
 	private void LoadPreferences() {
 		SharedPreferences preferences = PreferenceManager
 				.getDefaultSharedPreferences(this.getActivity());
-		String market = preferences.getString("market", "-1");
+		String market = preferences.getString("market", "0");
 		Map map = preferences.getAll();
 		System.out.println("WTF : " + map.values() + " HUH " + map.toString()
 				+ " WHAT! " + map.containsKey(0));
@@ -253,13 +244,14 @@ public class Markets extends Fragment {
 		 * tvLast.setText(ticker.getLast().toString());
 		 * tvVolume.setText(ticker.getVolume().toString()); }
 		 */
-		textBTC = getActivity().getIntent().getExtras().getString("1");
-		System.out.println(textBTC);
-		textBTC = getActivity().getIntent().getStringExtra("1");
-		System.out.println(textBTC);
-		textBTC = (String) getActivity().getIntent().getExtras().get("1");
-		System.out.println(textBTC);
-		tvBTC.setText(textBTC);
+		/*
+		 * textBTC = getActivity().getIntent().getExtras().getString("1");
+		 * System.out.println(textBTC); textBTC =
+		 * getActivity().getIntent().getStringExtra("1");
+		 * System.out.println(textBTC); textBTC = (String)
+		 * getActivity().getIntent().getExtras().get("1");
+		 * System.out.println(textBTC); tvChange.setText(textBTC);
+		 */
 
 	}
 
@@ -276,30 +268,33 @@ public class Markets extends Fragment {
 				asking = Double.parseDouble(ticker.getAsk().toString()
 						.replace("USD ", ""));
 				tvPrice.setText("$ " + String.format("%.2f", asking));
-				
-				((MainActivity) getActivity()).setPrice(tvPrice.getText().toString());
-				/*
-				String price = tvPrice.getText().toString();
-				System.out.println(price);
-				getActivity().getIntent().putExtra("0", price);
-				System.out.println(price);
-				getActivity().getIntent().putExtra("asking", price);
-				System.out.println(price);*/
 
-				low = Double.parseDouble(ticker.getLow()
-						.toString().replace("USD ", ""));
+				onPriceUpdated(asking, 0);
+
+				((MainActivity) getActivity()).setPrice(tvPrice.getText()
+						.toString());
+				/*
+				 * String price = tvPrice.getText().toString();
+				 * System.out.println(price);
+				 * getActivity().getIntent().putExtra("0", price);
+				 * System.out.println(price);
+				 * getActivity().getIntent().putExtra("asking", price);
+				 * System.out.println(price);
+				 */
+
+				low = Double.parseDouble(ticker.getLow().toString()
+						.replace("USD ", ""));
 				tvLow.setText("Low: " + String.format("%.2f", low));
 
-				high = Double.parseDouble(ticker.getHigh()
-						.toString().replace("USD ", ""));
+				high = Double.parseDouble(ticker.getHigh().toString()
+						.replace("USD ", ""));
 				tvHigh.setText("High: " + String.format("%.2f", high));
 
-				last = Double.parseDouble(ticker.getLast()
-						.toString().replace("USD ", ""));
+				last = Double.parseDouble(ticker.getLast().toString()
+						.replace("USD ", ""));
 				tvLast.setText("Last: " + String.format("%.2f", last));
 
-				volume = Double.parseDouble(ticker.getVolume()
-						.toString());
+				volume = Double.parseDouble(ticker.getVolume().toString());
 				tvVolume.setText("Volume: " + String.format("%.2f", volume));
 			}
 
@@ -330,6 +325,7 @@ public class Markets extends Fragment {
 			}
 		});
 
+		Log.d("Position: ", "" + position);
 		switch (position) {
 		// mtgox
 		case 0:
@@ -371,19 +367,22 @@ public class Markets extends Fragment {
 		// TODO Auto-generated method stub
 		super.onResume();
 		// LoadPreferences();
-		//getActivity().getIntent().putExtra("asking", tvPrice.getText().toString());
-		//System.out.println("" + tvPrice.getText().toString());
-		//getActivity().getIntent().putExtra("0", tvPrice.getText().toString());
-		//System.out.println("" + tvPrice.getText().toString());
+		// getActivity().getIntent().putExtra("asking",
 		// tvPrice.getText().toString());
-		
-		textBTC = getActivity().getIntent().getExtras().getString("1");
-		System.out.println(textBTC);
-		textBTC = getActivity().getIntent().getStringExtra("1");
-		System.out.println(textBTC);
-		textBTC = (String) getActivity().getIntent().getExtras().get("1");
-		System.out.println(textBTC);
-		tvBTC.setText(textBTC);
+		// System.out.println("" + tvPrice.getText().toString());
+		// getActivity().getIntent().putExtra("0",
+		// tvPrice.getText().toString());
+		// System.out.println("" + tvPrice.getText().toString());
+		// tvPrice.getText().toString());
+
+		/*
+		 * textBTC = getActivity().getIntent().getExtras().getString("1");
+		 * System.out.println(textBTC); textBTC =
+		 * getActivity().getIntent().getStringExtra("1");
+		 * System.out.println(textBTC); textBTC = (String)
+		 * getActivity().getIntent().getExtras().get("1");
+		 * System.out.println(textBTC); tvBTC.setText(textBTC);
+		 */
 	}
 
 	@Override
@@ -400,47 +399,38 @@ public class Markets extends Fragment {
 		}
 	}
 
-	// add items into spinner dynamically
-	public void addItemsOnspinCur() {
-		List<String> list = new ArrayList<String>();
-		list.add("USD");
-		list.add("EUR");
-		list.add("JPY");
-		list.add("GBP");
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(
-				this.getActivity(), android.R.layout.simple_spinner_item, list);
-		// Change look of Spinner with:
-		// dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item);
-		spinCur.setAdapter(dataAdapter);
-	}
-
-	public void addListenerOnSpinnerItemSelection() {
-		spinCur.setOnItemSelectedListener(new CustomOnItemSelectedListener());
-	}
 	/*
-	// get the selected dropdown list value
-	public void addListenerOnButton() {
-
-		Button btnSave = (Button) getActivity().findViewById(R.id.btnSave);
-
-		btnSave.setOnClickListener(new OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-
-				Toast.makeText(
-						getActivity(),
-						"OnClickListener : " + "\nSpinner 2 : "
-								+ String.valueOf(spinCur.getSelectedItem()),
-						Toast.LENGTH_SHORT).show();
-				Log.d("Spin", spinCur.getSelectedItem().toString());
-			}
-
-		});
-
-	}
-
-	
+	 * // add items into spinner dynamically public void addItemsOnspinCur() {
+	 * List<String> list = new ArrayList<String>(); list.add("USD");
+	 * list.add("EUR"); list.add("JPY"); list.add("GBP"); ArrayAdapter<String>
+	 * dataAdapter = new ArrayAdapter<String>( this.getActivity(),
+	 * android.R.layout.simple_spinner_item, list); // Change look of Spinner
+	 * with: //
+	 * dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_item
+	 * ); spinCur.setAdapter(dataAdapter); }
+	 * 
+	 * 
+	 * public void addListenerOnSpinnerItemSelection() {
+	 * spinCur.setOnItemSelectedListener(new CustomOnItemSelectedListener()); }
+	 * 
+	 * // get the selected dropdown list value public void addListenerOnButton()
+	 * {
+	 * 
+	 * Button btnSave = (Button) getActivity().findViewById(R.id.btnSave);
+	 * 
+	 * btnSave.setOnClickListener(new OnClickListener() {
+	 * 
+	 * @Override public void onClick(View v) {
+	 * 
+	 * Toast.makeText( getActivity(), "OnClickListener : " + "\nSpinner 2 : " +
+	 * String.valueOf(spinCur.getSelectedItem()), Toast.LENGTH_SHORT).show();
+	 * Log.d("Spin", spinCur.getSelectedItem().toString()); }
+	 * 
+	 * });
+	 * 
+	 * }
+	 * 
+	 * 
 	 * public double currencyChange(String cur1, TextView tv) { // This sets the
 	 * Rate for Euros and USD, NEED TO AUTOMATE VIA SELECTION! JsonReader reader
 	 * = new JsonReader();

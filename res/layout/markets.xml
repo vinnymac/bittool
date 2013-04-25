@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
-    android:orientation="vertical" >
+    android:orientation="vertical"
+    tools:context=".Markets" >
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,12 +23,12 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <TextView
-            android:id="@+id/tvBTC"
+            android:id="@+id/tvChange"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
-            android:text="1 BTC"
+            android:text="0.00"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textSize="20sp" />
 
@@ -49,12 +51,12 @@
         android:text="$ 0.00"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="70sp" />
-    
+
     <TextView
-                android:id="@+id/tvMarketID"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Market" />
+        android:id="@+id/tvMarketID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Market" />
 
     <TextView
         android:id="@+id/tvVolume"

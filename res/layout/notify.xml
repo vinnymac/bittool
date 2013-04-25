@@ -9,9 +9,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Sends a notification when the price is reached"
         android:layout_marginTop="10dp"
-        android:gravity="center" />
+        android:gravity="center"
+        android:text="Sends a notification when the price is reached" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -34,10 +34,36 @@
             android:text="Edit" />
     </LinearLayout>
 
+    <!--
     <ListView
         android:id="@+id/lvAlerts"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" >
     </ListView>
+    -->
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <br.com.dina.ui.widget.UITableView
+                android:id="@+id/uITVAlerts"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" >
+            </br.com.dina.ui.widget.UITableView>
+        </LinearLayout>
+    </ScrollView>
+
+    <br.com.dina.ui.widget.UITableView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+    </br.com.dina.ui.widget.UITableView>
 
 </LinearLayout>

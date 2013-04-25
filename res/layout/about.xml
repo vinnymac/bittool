@@ -32,7 +32,7 @@
                 android:id="@+id/tvDes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="A Bitcoin Exchange application for Android. Created by Vinnymac" />
+                android:text="A Bitcoin Exchange application for Android." />
         </LinearLayout>
         
     </LinearLayout>

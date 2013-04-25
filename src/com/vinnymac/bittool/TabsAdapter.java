@@ -9,6 +9,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
+import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
@@ -29,6 +30,10 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 		TabInfo(Class<?> _class, Bundle _args){
 			clss = _class;
 			args = _args;
+		}
+		
+		public Bundle getArgs(){
+			return args;
 		}
 	}
 	
@@ -79,11 +84,15 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 			}
 		}
 		
+		//ft.replace(mViewPager.getId(), getItem(tab.getPosition()));
+		
 	}
 
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
 		//Toast.makeText(mContext, "You've deselected a tab", Toast.LENGTH_SHORT).show();
+		
+		//ft.remove(getItem(tab.getPosition()));
 	}
 
 	@Override
@@ -101,5 +110,10 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 	public int getCount() {
 		return mTabs.size();
 	}
+	
+	public TabInfo getTag(int position) {
+		return mTabs.get(position);
+	}
+
 
 }

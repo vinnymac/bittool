@@ -31,6 +31,7 @@ public class Calc extends Fragment {
 
 	private String textPrice = "$ 0.00";
 	private String textBTC;
+	double theId = -1;
 
 	// double USD =
 	// this.getActivity().getIntent().getExtras().getDouble("asking");
@@ -82,6 +83,13 @@ public class Calc extends Fragment {
 
 		resultUSD.setText(textPrice);
 		resultBTC.setText(textBTC);
+		
+		
+		Log.d("ARGS: ", "" + getArguments().isEmpty());
+		if (getArguments().containsKey("price") && !(getArguments().isEmpty())) {
+		      theId = getArguments().getDouble("price");
+		}
+		resultUSD.setText("$ " + theId);
 
 		// Buttons!
 		one = (Button) view.findViewById(R.id.Btn1_id);
@@ -211,6 +219,10 @@ public class Calc extends Fragment {
 		});
 	}
 	
+	public void setPrice(double price){
+		resultUSD.setText("$ " + price);
+	}
+	
 	@Override
 	public void setUserVisibleHint(boolean isVisibleToUser) {
 		super.setUserVisibleHint(isVisibleToUser);
@@ -218,8 +230,23 @@ public class Calc extends Fragment {
 		// Make sure that we are currently visible
 		if (this.isVisible()) {
 			
-			textPrice = ((MainActivity) getActivity()).getPrice();
-			resultUSD.setText(textPrice);
+			//textPrice = ((MainActivity) getActivity()).getPrice();
+			//resultUSD.setText(textPrice);
+			
+			/*
+			double theId = -1;
+			Bundle arguments = getArguments();
+			if(arguments != null){
+				System.out.println("Is sorta not broken.");
+			}else{
+				System.out.println("Broken");
+			}
+			
+			Log.d("ARGS: ", "" + arguments.isEmpty());
+			if (getArguments().containsKey("price") && !(getArguments().isEmpty())) {
+			      theId = getArguments().getDouble("price");
+			}
+			resultUSD.setText("$ " + theId);*/
 			
 			// If we are becoming invisible, then...
 			if (!isVisibleToUser) {
@@ -289,7 +316,8 @@ public class Calc extends Fragment {
 	public void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-
+		//textPrice = ((MainActivity) getActivity()).getPrice();
+		//resultUSD.setText(textPrice);
 	}
 
 	private void reset() {
@@ -298,7 +326,7 @@ public class Calc extends Fragment {
 		op = 'q';
 		num = 0;
 		numtemp = 0;
-		resultBTC.setText("1 BTC");
+		resultBTC.setText("0 BTC");
 		resultUSD.setText("$ " + price);
 		//getActivity().getIntent().putExtra("1", resultBTC.getText().toString());
 	}
@@ -323,7 +351,7 @@ public class Calc extends Fragment {
 		resultBTC.append(" BTC");
 		
 		price = Double.valueOf(textPrice.replace("$ ", "")).doubleValue();
-		double newPrice = price * btcTotal;
+		double newPrice = theId * btcTotal;
 		resultUSD.setText("$ " + String.format("%.2f", newPrice));
 		
 
