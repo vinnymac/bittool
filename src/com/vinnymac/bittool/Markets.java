@@ -9,7 +9,6 @@ import java.util.concurrent.ExecutionException;
 import com.vinnymac.bittool.Xchange.DataDownloadListener;
 import com.xeiam.xchange.Exchange;
 import com.xeiam.xchange.ExchangeFactory;
-import com.xeiam.xchange.bitcoincentral.BitcoinCentralExchange;
 import com.xeiam.xchange.bitstamp.BitstampExchange;
 import com.xeiam.xchange.btce.BTCEExchange;
 import com.xeiam.xchange.campbx.CampBXExchange;
@@ -37,6 +36,7 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +58,9 @@ public class Markets extends Fragment {
 	TextView marketID;
 	// TextView USD;
 	// TextView EUR;
+	
+	// Image Views
+	ImageView ivChange;
 
 	// Buttons
 	Button btnUSD;
@@ -179,6 +182,8 @@ public class Markets extends Fragment {
 		tvVolume = (TextView) view.findViewById(R.id.tvVolume);
 
 		marketID = (TextView) view.findViewById(R.id.tvMarketID);
+		
+		ivChange = (ImageView) view.findViewById(R.id.ivChange);
 
 		// ///////*********THIS IS THE SETUP***********/////////
 		
@@ -215,7 +220,21 @@ public class Markets extends Fragment {
 
 		volume = Double.parseDouble(ticker.getVolume().toString());
 		tvVolume.setText("Volume: " + String.format("%.2f", volume));
+		
+		UpDownEqual();
 
+	}
+	
+	private void UpDownEqual(){
+		// Math for Equal/Up/Down Change between Asking Price and Last Price
+		double change = asking - last;
+		tvChange.setText(String.format("%.2f", change));
+		if(asking > last){
+			ivChange.setImageResource(R.drawable.up);
+		}
+		else if(asking < last){
+			ivChange.setImageResource(R.drawable.down);
+		}
 	}
 
 	private void LoadPreferences() {

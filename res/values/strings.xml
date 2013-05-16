@@ -7,8 +7,7 @@
     <string name="calc">Test</string>
     <string name="textBTC">1 BTC</string>
     <string name="textPrice">0.00 USD</string>
-    
-     <string name="menu_settings">Settings</string>
+    <string name="menu_settings">Settings</string>
     <string name="pref_send_report">Send crash reports</string>
     <string name="pref_send_report_summary">Helps to fix bugs</string>
     <string name="pref_sync_frequency">Update frequency</string>
@@ -17,12 +16,12 @@
     <string name="pref_user_name_summary">Set your username</string>
     <string name="pref_user_profile">User Profile</string>
     <string name="pref_update_setting">Update Settings</string>
-    
     <string name="market">Update default Market</string>
     <string name="market_summary">Set the Default Market</string>
     <string name="currency">Update default Currency</string>
     <string name="currency_summary">Set the Default Currency</string>
-    
     <string name="sound">Startup Sound</string>
-	<string name="sound_summary">Turn the sound on or off.</string>
+    <string name="sound_summary">Turn the sound on or off.</string>
+    <string name="change">Change of Price<sttring></sttring></string>
+
 </resources>

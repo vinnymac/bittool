@@ -16,17 +16,25 @@
         <TextView
             android:id="@+id/tvLow"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="left"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|left"
             android:paddingLeft="10dp"
             android:text="Low: 0"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
+        <ImageView
+            android:contentDescription="@string/change"
+            android:id="@+id/ivChange"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/equal" />
+
         <TextView
             android:id="@+id/tvChange"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:layout_weight=".3"
             android:gravity="center"
             android:text="0.00"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -35,8 +43,9 @@
         <TextView
             android:id="@+id/tvHigh"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="right"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_vertical|right"
             android:paddingRight="10dp"
             android:text="High: 0"
             android:textAppearance="?android:attr/textAppearanceMedium" />

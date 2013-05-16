@@ -1,22 +1,12 @@
 package com.vinnymac.bittool;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import android.os.AsyncTask;
 
 import com.xeiam.xchange.Exchange;
 import com.xeiam.xchange.ExchangeFactory;
-import com.xeiam.xchange.bitcoincentral.BitcoinCentralExchange;
-import com.xeiam.xchange.bitstamp.BitstampExchange;
-import com.xeiam.xchange.btce.BTCEExchange;
-import com.xeiam.xchange.campbx.CampBXExchange;
 import com.xeiam.xchange.currency.Currencies;
 import com.xeiam.xchange.dto.marketdata.Ticker;
-import com.xeiam.xchange.mtgox.v1.MtGoxExchange;
 import com.xeiam.xchange.service.marketdata.polling.PollingMarketDataService;
-
-import android.os.AsyncTask;
-import android.util.Log;
-import android.widget.TextView;
 
 public class Xchange extends AsyncTask<String, Void, Ticker> {
 

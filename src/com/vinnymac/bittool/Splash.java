@@ -3,27 +3,21 @@ package com.vinnymac.bittool;
 import java.util.concurrent.ExecutionException;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.util.Log;
 
-import com.xeiam.xchange.dto.marketdata.Ticker;
-
 public class Splash extends Activity {
 
-	// JSONContact jsonData = new JSONContact();
-
 	UpdateMarket xchange = new UpdateMarket();
-
-	// Bitstamp Market
-	// final static String URL = "https://www.bitstamp.net/api/ticker/";
-
-	// BTC-E Market https://btc-e.com/api/2/btc_usd/ticker
-	// CampBX Market http://campbx.com/api/xticker.php
-	// MTGox Market http://data.mtgox.com/api/1/BTCUSD/ticker
 
 	MediaPlayer ourSong;
 
@@ -49,8 +43,6 @@ public class Splash extends Activity {
 	}
 
 	private void initialize() {
-		// Gets latest JSON data from a site like bitstamp
-		// final String bitstampArray = updateJSON(URL);
 
 		// Start sound, don't let it carry on to next class, below ContentView
 		ourSong = MediaPlayer.create(Splash.this, R.raw.splashsound);
@@ -60,25 +52,57 @@ public class Splash extends Activity {
 		PreferenceManager.setDefaultValues(this, R.xml.preferences, true);
 		// sends default preferences to the update which gathers market/currency
 		// prefs and calls for an Xchange Ticker
-		
-		Ticker data = update(getPrefs);
-		
-		if(data == null){
-			data = new Ticker.TickerBuilder().build();
-		}
-		
-		if (data != null) {
 
+		Tick data = update(getPrefs);
+
+		// BEGIN TESTING CONNECTION AND DATA DOWNLOADING
+
+		// CASE 1: DATA FAILS TO DOWNLOAD FROM ONLINE.
+		if (data.getAsk().equals("-1")) {
+			// CASE 0: NO CONNECTION FOUND
+			if (!(isNetworkAvailable())) {
+				Log.d("Failed to connect: ", "Connection False");
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+				alertDialog
+						.setTitle("No Connection Found, try connecting to a network.");
+				alertDialog.setMessage("The App Will Now Close");
+				alertDialog.setPositiveButton("OK",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// OK closes app.
+								finish();
+							}
+						});
+			} else {
+				Log.d("Failed to download: ", "Market Data NUll");
+				AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+				alertDialog
+						.setTitle("Failure to Download Market Data\n Try Again Later");
+				alertDialog.setMessage("The App Will Close");
+				alertDialog.setPositiveButton("OK",
+						new DialogInterface.OnClickListener() {
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// OK closes app.
+								finish();
+							}
+						});
+			}
+		}
+
+		// CASE 2: DATA DOWNLOADS SUCCESSFULLY
+		else {
+			Log.d("Successfully Connected: ", "Connection True.");
+			Log.d("Successfully Downloaded: ", "Market Data GOOD");
+
+			// Tick is an Array of Strings Object
 			// Make the data parceable to send to the next activity.
-			final Tick ticker = new Tick(data.getTradableIdentifier()
-					.toString(), data.getLast().toString(), data.getBid()
-					.toString(), data.getAsk().toString(), data.getHigh()
-					.toString(), data.getLow().toString(), data.getVolume()
-					.toString(), data.getTimestamp().toString());
-			
+			final Tick ticker = data;
+
 			final boolean music = getPrefs.getBoolean("sound", true);
 
-			if (music == true) {
+			if (music) {
 				ourSong.start();
 			}
 
@@ -99,10 +123,6 @@ public class Splash extends Activity {
 				}
 			};
 			timer.start();
-		} else {
-			// Show splashscreen telling user cannot get data at this time.
-			Log.d("Failed to start: ", "Market Data NUll");
-			Log.e("Failed to start: ", "Market Data NUll");
 		}
 	}
 
@@ -114,18 +134,18 @@ public class Splash extends Activity {
 		finish();
 	}
 
-	private Ticker update(SharedPreferences preferences) {
-		
-		String[] markets = {"com.xeiam.xchange.mtgox.v1.MtGoxExchange","com.xeiam.xchange.btce.BTCEExchange",
-				"com.xeiam.xchange.bitstamp.BitstampExchange","com.xeiam.xchange.campbx.CampBXExchange",
-				"com.xeiam.xchange.bitcoincentral.BitcoinCentralExchange"};
+	private Tick update(SharedPreferences preferences) {
+
+		String[] markets = { "com.xeiam.xchange.mtgox.v1.MtGoxExchange",
+				"com.xeiam.xchange.btce.BTCEExchange",
+				"com.xeiam.xchange.bitstamp.BitstampExchange",
+				"com.xeiam.xchange.campbx.CampBXExchange" };
 
 		// Default Market
 		String market = preferences.getString("market", "0");
 		System.out.println("WTF IS THE MARKET: " + market);
 		int position = Integer.parseInt(market);
-		String[] marketNames = getResources()
-				.getStringArray(R.array.market);
+		String[] marketNames = getResources().getStringArray(R.array.market);
 
 		// Default Currency
 		String currency = preferences.getString("currency", "0");
@@ -137,24 +157,33 @@ public class Splash extends Activity {
 		Log.d("Market and Currency: ", "Market: " + market + "|||Currency: "
 				+ currency);
 
-		Ticker data = new Ticker.TickerBuilder().build();
+		// Ticker data = new Ticker.TickerBuilder().build();
+		Tick data = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1");
 
 		try {
 			System.out.println(markets[position]);
 			System.out.println(currency);
 			data = xchange.execute(markets[position], currency).get();
-			//data = xchange.execute("com.xeiam.xchange.bitstamp.BitstampExchange", "USD").get();
-			// data = jsonData.execute(URL).get();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		} catch (ExecutionException e) {
 			e.printStackTrace();
 		} catch (NullPointerException e) {
-			e.printStackTrace();	}
+			e.printStackTrace();
+		}
 
 		Log.e("Market Response", data.toString());
 
 		return data;
+	}
+
+	public boolean isNetworkAvailable() {
+		ConnectivityManager connectivityManager = (ConnectivityManager) this
+				.getSystemService(Context.CONNECTIVITY_SERVICE);
+		NetworkInfo activeNetworkInfo = connectivityManager
+				.getActiveNetworkInfo();
+		return activeNetworkInfo != null
+				&& activeNetworkInfo.isConnectedOrConnecting();
 	}
 
 }

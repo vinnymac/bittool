@@ -4,24 +4,5 @@
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry kind="lib" path="libs/xchange-bitcoin24-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-bitcoincentral-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-bitcoincharts-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-bitfloor-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-bitstamp-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-btce-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-campbx-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-cavirtex-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-core-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-examples-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-mtgox-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/xchange-openexchangerates-1.5.0.jar"/>
-	<classpathentry kind="lib" path="libs/joda-money-0.8.jar"/>
-	<classpathentry kind="lib" path="libs/jackson-annotations-2.1.1.jar"/>
-	<classpathentry kind="lib" path="libs/jackson-core-2.1.1.jar"/>
-	<classpathentry kind="lib" path="libs/jackson-databind-2.1.1.jar"/>
-	<classpathentry kind="lib" path="libs/jsr305-2.0.1.jar"/>
-	<classpathentry kind="lib" path="libs/jsr311-api-1.1.1.jar"/>
-	<classpathentry kind="lib" path="libs/slf4j-api-1.7.2.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

@@ -14,7 +14,6 @@
             android:summary="@string/pref_send_report_summary"
             android:title="@string/pref_send_report" >
         </CheckBoxPreference>
-        
         <CheckBoxPreference
             android:defaultValue="true"
             android:key="sound"
