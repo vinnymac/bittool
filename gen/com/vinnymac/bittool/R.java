@@ -1531,6 +1531,9 @@ containing a value of this type.
         public static final int splashsound=0x7f050000;
     }
     public static final class string {
+        /**  About Message 
+         */
+        public static final int about_message=0x7f0b0024;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abs__action_bar_home_description=0x7f0b0000;

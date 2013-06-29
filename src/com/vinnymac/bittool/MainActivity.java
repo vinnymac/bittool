@@ -23,7 +23,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
 
@@ -123,8 +125,16 @@ public class MainActivity extends SherlockFragmentActivity implements
 		 * 
 		 * } }).show(); System.out.println("Hello About!");
 		 */
-		Intent about = new Intent("com.vinnymac.bittool.ABOUT");
-		startActivity(about);
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		TextView myMsg = new TextView(this);
+		myMsg.setText(R.string.about_message);
+		myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
+		myMsg.setMovementMethod(new ScrollingMovementMethod());
+		builder.setView(myMsg);
+		AlertDialog dialog = builder.show();
+		dialog.show();
+		//Intent about = new Intent("com.vinnymac.bittool.ABOUT");
+		//startActivity(about);
 	}
 
 	private void settings() {
