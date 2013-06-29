@@ -97,7 +97,7 @@ public class Splash extends Activity {
 			Log.d("Successfully Downloaded: ", "Market Data GOOD");
 
 			// Tick is an Array of Strings Object
-			// Make the data parceable to send to the next activity.
+			// Make the data parsable to send to the next activity.
 			final Tick ticker = data;
 
 			final boolean music = getPrefs.getBoolean("sound", true);

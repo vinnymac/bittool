@@ -43,14 +43,11 @@ public class About extends SherlockActivity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
 		switch (item.getItemId()) {
 
 		case android.R.id.home:
 			// app icon in action bar clicked; go home
-			Intent mainIntent = new Intent(this, MainActivity.class);
-			mainIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			startActivity(mainIntent);
+			finish();
 		default:
 			return super.onOptionsItemSelected(item);
 		}

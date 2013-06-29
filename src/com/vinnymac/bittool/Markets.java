@@ -19,8 +19,10 @@ import com.xeiam.xchange.service.marketdata.polling.PollingMarketDataService;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -42,10 +44,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class Markets extends Fragment {
+	
+	public final static String TAG = Markets.class.getSimpleName();
 
 	final static String URL = "https://www.bitstamp.net/api/ticker/";
 	final static String CUR = "http://rate-exchange.appspot.com/currency?from=";
 	final static String filler = "&to=";
+	public final static String TICKER = "ticker";
 
 	// Some Global ui values
 	TextView tvRate;
@@ -58,7 +63,7 @@ public class Markets extends Fragment {
 	TextView marketID;
 	// TextView USD;
 	// TextView EUR;
-	
+
 	// Image Views
 	ImageView ivChange;
 
@@ -96,6 +101,8 @@ public class Markets extends Fragment {
 	private Tick ticker;
 
 	private Callbacks mCallbacks;
+
+	private SharedPreferences preferences;
 
 	/*
 	 * double bitStampLow = -1.0; double bitStampHigh = -1.0; double
@@ -147,6 +154,27 @@ public class Markets extends Fragment {
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
+		if (getActivity().getIntent() != null) {
+			ticker = getActivity().getIntent().getParcelableExtra(TICKER);
+		}
+		
+		if (ticker == null) {
+			ticker = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1");
+			if (savedInstanceState != null) {
+				if (savedInstanceState.containsKey(TICKER)) {
+					ticker = savedInstanceState.getParcelable(TICKER);
+				} else {
+					ticker = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1",
+							"-1");
+				}
+			} else {
+				ticker = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1",
+						"-1");
+			}
+		}
+		
+		// Actually updates and sets up the text and data.
+		setup();
 
 	}
 
@@ -155,9 +183,11 @@ public class Markets extends Fragment {
 			Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.markets, container, false);
 
+		// Check if it is safe to update.
 		update = isNetworkAvailable();
 
 		initialize(view);
+
 		/*
 		 * LoadPreferences(); if (update) {
 		 * 
@@ -166,11 +196,13 @@ public class Markets extends Fragment {
 		return view;
 	}
 
-	private void initialize(View view) {
+	@Override
+	public void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		outState.putParcelable(TICKER, ticker);
+	}
 
-		// Gets parceable data from Splash.
-		Bundle data = getActivity().getIntent().getExtras();
-		ticker = data.getParcelable("ticker");
+	private void initialize(View view) {
 
 		// Setup buttons, views, etc
 		tvPrice = (TextView) view.findViewById(R.id.price);
@@ -182,57 +214,67 @@ public class Markets extends Fragment {
 		tvVolume = (TextView) view.findViewById(R.id.tvVolume);
 
 		marketID = (TextView) view.findViewById(R.id.tvMarketID);
-		
+
 		ivChange = (ImageView) view.findViewById(R.id.ivChange);
 
+	}
+
+	public void setup() {
 		// ///////*********THIS IS THE SETUP***********/////////
-		
-		SharedPreferences preferences = PreferenceManager
-				.getDefaultSharedPreferences(this.getActivity());
+
+		preferences = PreferenceManager.getDefaultSharedPreferences(getActivity());
 		String market = preferences.getString("market", "0");
 		String[] marketNames = getResources().getStringArray(R.array.market);
 		int position = Integer.parseInt(market);
 		marketID.setText(marketNames[position]);
-		
+
+		// Default Currency
+		// preferences.getInt(key, defValue);
+		String currency = preferences.getString("currency", "0");
+		String[] currencyNames = getResources()
+				.getStringArray(R.array.currency);
+		int pos = Integer.parseInt(currency);
+		currency = currencyNames[pos];
 
 		System.out.println("Success");
 		System.out.println(ticker.toString());
 
+		Log.d("Currency before Double Conversion", currency.toString());
+
 		asking = Double.parseDouble(ticker.getAsk().toString()
-				.replace("USD ", ""));
+				.replace(currency + " ", ""));
 		tvPrice.setText("$ " + String.format("%.2f", asking));
 
 		onPriceUpdated(asking, 0);
 
 		((MainActivity) getActivity()).setPrice(tvPrice.getText().toString());
 
-		low = Double
-				.parseDouble(ticker.getLow().toString().replace("USD ", ""));
+		low = Double.parseDouble(ticker.getLow().toString()
+				.replace(currency + " ", ""));
 		tvLow.setText("Low: " + String.format("%.2f", low));
 
 		high = Double.parseDouble(ticker.getHigh().toString()
-				.replace("USD ", ""));
+				.replace(currency + " ", ""));
 		tvHigh.setText("High: " + String.format("%.2f", high));
 
 		last = Double.parseDouble(ticker.getLast().toString()
-				.replace("USD ", ""));
+				.replace(currency + " ", ""));
 		tvLast.setText("Last: " + String.format("%.2f", last));
 
 		volume = Double.parseDouble(ticker.getVolume().toString());
 		tvVolume.setText("Volume: " + String.format("%.2f", volume));
-		
+
 		UpDownEqual();
 
 	}
-	
-	private void UpDownEqual(){
+
+	private void UpDownEqual() {
 		// Math for Equal/Up/Down Change between Asking Price and Last Price
 		double change = asking - last;
 		tvChange.setText(String.format("%.2f", change));
-		if(asking > last){
+		if (asking > last) {
 			ivChange.setImageResource(R.drawable.up);
-		}
-		else if(asking < last){
+		} else if (asking < last) {
 			ivChange.setImageResource(R.drawable.down);
 		}
 	}

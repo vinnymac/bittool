@@ -7,8 +7,11 @@ import com.actionbarsherlock.view.MenuItem;
 import com.vinnymac.bittool.TabsAdapter.TabInfo;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
@@ -22,9 +25,18 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.View;
+import android.widget.TextView;
 
 public class MainActivity extends SherlockFragmentActivity implements
 		Markets.Callbacks {
+	
+	public final static String TAG = MainActivity.class.getSimpleName();
+	
+	/*
+	//BroadCast Service Class
+	private static final String TAG = "BroadcastTest";
+	private Intent intent;
+	*/
 
 	SharedPreferences prefs;
 
@@ -38,7 +50,7 @@ public class MainActivity extends SherlockFragmentActivity implements
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		
 		initialize();
 	}
 
@@ -51,8 +63,8 @@ public class MainActivity extends SherlockFragmentActivity implements
 		bar = getSupportActionBar();
 		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		this.getIntent().putExtra("0", textPrice);
-		this.getIntent().putExtra("1", textBTC);
+		getIntent().putExtra("0", textPrice);
+		getIntent().putExtra("1", textBTC);
 
 		mTabsAdapter = new TabsAdapter(this, mViewPager);
 		mTabsAdapter.addTab(bar.newTab().setText("Notify"), Notify.class, null);
@@ -62,9 +74,21 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 		mViewPager.setCurrentItem(1);
 
-		getSupportFragmentManager().beginTransaction().commit();
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		ft.commit();
+		
+		//intent = new Intent(this, BroadcastService.class);
 
 	}
+	
+	/*
+	private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
+		@Override
+		public void onReceive(Context context, Intent intent) {
+			//updateUI(intent);
+			initialize();
+		}
+	};*/
 
 	@Override
 	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
@@ -139,7 +163,21 @@ public class MainActivity extends SherlockFragmentActivity implements
 		// TODO Auto-generated method stub
 		super.onResume();
 		mTabsAdapter.notifyDataSetChanged();
+		
+		/*
+		startService(intent);
+		registerReceiver(broadcastReceiver, new IntentFilter(
+				BroadcastService.BROADCAST_ACTION));
+				*/
 	}
+	
+	/*
+	@Override
+	public void onPause() {
+		super.onPause();
+		unregisterReceiver(broadcastReceiver);
+		stopService(intent);
+	}*/
 
 	public void onItemSelected(double id) {
 		//Bundle args = new Bundle();
