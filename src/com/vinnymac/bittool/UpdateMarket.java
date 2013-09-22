@@ -14,18 +14,18 @@ import com.xeiam.xchange.btce.BTCEExchange;
 import com.xeiam.xchange.campbx.CampBXExchange;
 import com.xeiam.xchange.mtgox.v1.MtGoxExchange;
 
-public class UpdateMarket extends AsyncTask<String, Void, Tick> {
+public class UpdateMarket extends AsyncTask<String, Void, MarketSession> {
 
 	private Exception exception;
 
-	private Tick tickString;
+	private MarketSession tickString;
 
 	public UpdateMarket() {
 		// Constructor may be parametric
 	}
 
 	@Override
-	protected Tick doInBackground(String... params) {
+	protected MarketSession doInBackground(String... params) {
 		String exc = params[0];
 		String cur = params[1];
 
@@ -40,7 +40,7 @@ public class UpdateMarket extends AsyncTask<String, Void, Tick> {
 					.getPollingMarketDataService();
 			ticker = markettickerService.getTicker(Currencies.BTC, cur);
 
-			tickString = new Tick(ticker.getTradableIdentifier().toString(),
+			tickString = new MarketSession(ticker.getTradableIdentifier().toString(),
 					ticker.getLast().toString(), ticker.getBid().toString(),
 					ticker.getAsk().toString(), ticker.getHigh().toString(),
 					ticker.getLow().toString(), ticker.getVolume().toString(), "-1");
@@ -49,11 +49,11 @@ public class UpdateMarket extends AsyncTask<String, Void, Tick> {
 
 		} catch (NoClassDefFoundError e) {
 			e.printStackTrace();
-			tickString = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1",
+			tickString = new MarketSession("-1", "-1", "-1", "-1", "-1", "-1", "-1",
 					"-1");
 		} catch (Exception e) {
 			e.printStackTrace();
-			tickString = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1",
+			tickString = new MarketSession("-1", "-1", "-1", "-1", "-1", "-1", "-1",
 					"-1");
 		}
 

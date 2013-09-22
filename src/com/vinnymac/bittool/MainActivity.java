@@ -1,45 +1,31 @@
 package com.vinnymac.bittool;
 
-import com.actionbarsherlock.app.ActionBar;
-import com.actionbarsherlock.app.SherlockFragmentActivity;
-import com.actionbarsherlock.view.Menu;
-import com.actionbarsherlock.view.MenuItem;
-import com.vinnymac.bittool.TabsAdapter.TabInfo;
-
-import android.app.AlertDialog;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.os.Bundle;
-import android.os.StrictMode;
-import android.os.StrictMode.ThreadPolicy;
-import android.preference.PreferenceManager;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentManager.OnBackStackChangedListener;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
-import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.View;
-import android.widget.TextView;
+
+import com.actionbarsherlock.app.ActionBar;
+import com.actionbarsherlock.app.SherlockDialogFragment;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.MenuItem;
 
 public class MainActivity extends SherlockFragmentActivity implements
-		Markets.Callbacks {
-	
+		MarketFragment.Callbacks {
+
 	public final static String TAG = MainActivity.class.getSimpleName();
 	
-	/*
-	//BroadCast Service Class
-	private static final String TAG = "BroadcastTest";
-	private Intent intent;
-	*/
-
+	private static final String KEY_QUICKPREF = Constants.BUNDLE_KEY_ROOT + "QUICKPREF";
+	private static final String KEY_PRICE = "price";
+	private static final String KEY_BTC = "btc";
+	
+	private static final String FRAGMENT_ABOUT_DIALOG = "about_dialog";
+	private static final String NOTIFY_FRAGMENT = "Notify";
+	private static final String MARKET_FRAGMENT = "Exchange";
+	private static final String CALCULATE_FRAGMENT = "Calculate";
+	
 	SharedPreferences prefs;
 
 	private String textPrice = "$ 0.00";
@@ -47,12 +33,11 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 	private ViewPager mViewPager;
 	private TabsAdapter mTabsAdapter;
-	private ActionBar bar;
+	private ActionBar mActionBar;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
 		initialize();
 	}
 
@@ -62,35 +47,20 @@ public class MainActivity extends SherlockFragmentActivity implements
 		mViewPager.setId(R.id.pager);
 		setContentView(mViewPager);
 
-		bar = getSupportActionBar();
-		bar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
+		mActionBar = getSupportActionBar();
+		mActionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 
-		getIntent().putExtra("0", textPrice);
-		getIntent().putExtra("1", textBTC);
+		getIntent().putExtra(KEY_PRICE, textPrice);
+		getIntent().putExtra(KEY_BTC, textBTC);
 
 		mTabsAdapter = new TabsAdapter(this, mViewPager);
-		mTabsAdapter.addTab(bar.newTab().setText("Notify"), Notify.class, null);
-		mTabsAdapter.addTab(bar.newTab().setText("Exchange"), Markets.class,
-				null);
-		mTabsAdapter.addTab(bar.newTab().setText("Calculate"), Calc.class, args);
+		mTabsAdapter.addTab(mActionBar.newTab().setText(NOTIFY_FRAGMENT), NotifyFragment.class, null);
+		mTabsAdapter.addTab(mActionBar.newTab().setText(MARKET_FRAGMENT), MarketFragment.class, null);
+		mTabsAdapter.addTab(mActionBar.newTab().setText(CALCULATE_FRAGMENT), CalcFragment.class, args);
 
 		mViewPager.setCurrentItem(1);
-
-		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-		ft.commit();
-		
-		//intent = new Intent(this, BroadcastService.class);
-
+		getSupportFragmentManager().beginTransaction().commit();
 	}
-	
-	/*
-	private BroadcastReceiver broadcastReceiver = new BroadcastReceiver() {
-		@Override
-		public void onReceive(Context context, Intent intent) {
-			//updateUI(intent);
-			initialize();
-		}
-	};*/
 
 	@Override
 	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
@@ -103,53 +73,32 @@ public class MainActivity extends SherlockFragmentActivity implements
 		// Handle item selection
 		switch (item.getItemId()) {
 		case R.id.about:
-			about();
+			showAboutDialog();
 			return true;
 		case R.id.menu_settings:
-			settings();
+			startActivitySettings();
 			return true;
 		default:
 			return super.onOptionsItemSelected(item);
 		}
 	}
 
-	private void about() {
-		/*
-		 * This is how you would do an Alert Dialog! new
-		 * AlertDialog.Builder(this).setTitle("About")
-		 * .setMessage("This is an AlertDialog!") .setNeutralButton("OK", new
-		 * DialogInterface.OnClickListener() {
-		 * 
-		 * @Override public void onClick(DialogInterface dialog, int which) { //
-		 * TODO Auto-generated method stub
-		 * 
-		 * } }).show(); System.out.println("Hello About!");
-		 */
-		AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		TextView myMsg = new TextView(this);
-		myMsg.setText(R.string.about_message);
-		myMsg.setGravity(Gravity.CENTER_HORIZONTAL);
-		myMsg.setMovementMethod(new ScrollingMovementMethod());
-		builder.setView(myMsg);
-		AlertDialog dialog = builder.show();
-		dialog.show();
-		//Intent about = new Intent("com.vinnymac.bittool.ABOUT");
-		//startActivity(about);
+	private void showAboutDialog() {
+		AboutDialogFragment fragment = (AboutDialogFragment) getSupportFragmentManager().findFragmentByTag(FRAGMENT_ABOUT_DIALOG);
+		if (fragment == null) {
+			fragment = AboutDialogFragment.newInstance();
+		}
+		showDialogFragment(fragment, FRAGMENT_ABOUT_DIALOG);
 	}
 
-	private void settings() {
-		/*
-		 * new AlertDialog.Builder(this).setTitle("Settings")
-		 * .setMessage("This is an AlertDialog also!") .setNeutralButton("OK",
-		 * new DialogInterface.OnClickListener() {
-		 * 
-		 * @Override public void onClick(DialogInterface dialog, int which) { //
-		 * TODO Auto-generated method stub
-		 * 
-		 * } }).show(); System.out.println("Hello Settings!");
-		 */
-		Intent pref = new Intent("com.vinnymac.bittool.QUICKPREF");
+	private void startActivitySettings() {
+		Intent pref = new Intent(KEY_QUICKPREF);
 		startActivity(pref);
+	}
+	
+	protected void showDialogFragment(SherlockDialogFragment dialog, String tag) {
+		FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+		dialog.show(ft, tag);
 	}
 
 	protected String getPrice() {
@@ -170,51 +119,19 @@ public class MainActivity extends SherlockFragmentActivity implements
 
 	@Override
 	protected void onResume() {
-		// TODO Auto-generated method stub
 		super.onResume();
 		mTabsAdapter.notifyDataSetChanged();
-		
-		/*
-		startService(intent);
-		registerReceiver(broadcastReceiver, new IntentFilter(
-				BroadcastService.BROADCAST_ACTION));
-				*/
 	}
-	
-	/*
-	@Override
-	public void onPause() {
-		super.onPause();
-		unregisterReceiver(broadcastReceiver);
-		stopService(intent);
-	}*/
 
-	public void onItemSelected(double id) {
-		//Bundle args = new Bundle();
-		 /*Bundle args = new Bundle(); args.putDouble(Markets.ARG_ASK_KEY, id);
-		 
-		 mTabsAdapter .addTab(bar.newTab().setText("Calculate"), Calc.class,
-		 args);*/
-		
-		System.out.println("Tag 0: " + mTabsAdapter.getTag(0));
-		System.out.println("Tag 1: " + mTabsAdapter.getTag(1));
-		System.out.println("Tag 2: " + mTabsAdapter.getTag(2));
-		 
+	public void onUpdatedAskingPrice(double price) {
+		Log.e(TAG, "Tag 0: " + mTabsAdapter.getTag(0));
+		Log.e(TAG, "Tag 1: " + mTabsAdapter.getTag(1));
+		Log.e(TAG, "Tag 2: " + mTabsAdapter.getTag(2));
+
 		Bundle args = mTabsAdapter.getTag(2).getArgs();
 
-		Log.d("ID in ACTIVITY: ", "" + id);
-		args.putDouble(Markets.ARG_ASK_KEY, id);
-		// ((Calc) mTabsAdapter.getItem(2)).setPrice(id);
-		/*
-		 //mViewPager.find
-		TabInfo tag = mTabsAdapter.getTag(2);
-		Calc frag = (Calc) getSupportFragmentManager().findFragmentByTag(tag.toString());
-		
-		 
-		 //Calc frag = (Calc) mTabsAdapter.getItem(2);
-		 frag.setArguments(args);*/
-		 
-		 
+		Log.d(TAG, "Price: " + price);
+		args.putDouble(MarketFragment.KEY_ASK, price);
 	}
 
 }

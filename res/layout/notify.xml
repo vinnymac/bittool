@@ -5,13 +5,13 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="Sends a notification when the price is reached" />
+        android:text="@string/notification_description" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -20,50 +20,18 @@
         android:orientation="horizontal" >
 
         <Button
-            android:id="@+id/btnAdd"
+            android:id="@+id/button_add"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:text="Add" />
+            android:text="@string/add" />
 
         <Button
-            android:id="@+id/btnEdit"
+            android:id="@+id/button_edit"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="115dp"
             android:layout_height="wrap_content"
-            android:text="Edit" />
+            android:text="@string/edit" />
     </LinearLayout>
-
-    <!--
-    <ListView
-        android:id="@+id/lvAlerts"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-    </ListView>
-    -->
-
-    <ScrollView
-        android:id="@+id/scrollView1"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical" >
-
-            <br.com.dina.ui.widget.UITableView
-                android:id="@+id/uITVAlerts"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
-            </br.com.dina.ui.widget.UITableView>
-        </LinearLayout>
-    </ScrollView>
-
-    <br.com.dina.ui.widget.UITableView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
-
-    </br.com.dina.ui.widget.UITableView>
 
 </LinearLayout>

@@ -9,34 +9,35 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
-import android.view.ViewGroup;
-import android.widget.Toast;
 
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.ActionBar.Tab;
 import com.actionbarsherlock.app.SherlockFragmentActivity;
 
-public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabListener , ViewPager.OnPageChangeListener{
+public class TabsAdapter extends FragmentPagerAdapter implements
+		ActionBar.TabListener, ViewPager.OnPageChangeListener {
+
+	private static final String TAG = TabsAdapter.class.getSimpleName();
+
 	private final Context mContext;
 	private final ActionBar mActionBar;
 	private final ViewPager mViewPager;
 	private final ArrayList<TabInfo> mTabs = new ArrayList<TabInfo>();
-	private final String TAG = "21st Polling:";
-	
-	static final class TabInfo{
+
+	static final class TabInfo {
 		private final Class<?> clss;
 		private final Bundle args;
-		
-		TabInfo(Class<?> _class, Bundle _args){
+
+		TabInfo(Class<?> _class, Bundle _args) {
 			clss = _class;
 			args = _args;
 		}
-		
-		public Bundle getArgs(){
+
+		public Bundle getArgs() {
 			return args;
 		}
 	}
-	
+
 	public TabsAdapter(SherlockFragmentActivity fa, ViewPager pager) {
 		super(fa.getSupportFragmentManager());
 		mContext = fa;
@@ -45,8 +46,8 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 		mViewPager.setAdapter(this);
 		mViewPager.setOnPageChangeListener(this);
 	}
-	
-	public void addTab(ActionBar.Tab tab, Class<?> clss, Bundle args){
+
+	public void addTab(ActionBar.Tab tab, Class<?> clss, Bundle args) {
 		TabInfo info = new TabInfo(clss, args);
 		tab.setTag(info);
 		tab.setTabListener(this);
@@ -57,47 +58,36 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 
 	@Override
 	public void onPageScrollStateChanged(int state) {
-		
-		
 	}
 
 	@Override
-	public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-		
-		
+	public void onPageScrolled(int position, float positionOffset,
+			int positionOffsetPixels) {
 	}
 
 	@Override
 	public void onPageSelected(int position) {
 		mActionBar.setSelectedNavigationItem(position);
-		
 	}
 
 	@Override
 	public void onTabSelected(Tab tab, FragmentTransaction ft) {
 		mViewPager.setCurrentItem(tab.getPosition());
-		Log.v(TAG, "clicked");
+		Log.v(TAG, "Clicked Tab: " + tab.getPosition());
 		Object tag = tab.getTag();
-		for (int i = 0; i<mTabs.size(); i++){
-			if (mTabs.get(i) == tag){
+		for (int i = 0; i < mTabs.size(); i++) {
+			if (mTabs.get(i) == tag) {
 				mViewPager.setCurrentItem(i);
 			}
 		}
-		
-		//ft.replace(mViewPager.getId(), getItem(tab.getPosition()));
-		
 	}
 
 	@Override
 	public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-		//Toast.makeText(mContext, "You've deselected a tab", Toast.LENGTH_SHORT).show();
-		
-		//ft.remove(getItem(tab.getPosition()));
 	}
 
 	@Override
 	public void onTabReselected(Tab tab, FragmentTransaction ft) {
-		
 	}
 
 	@Override
@@ -110,10 +100,9 @@ public class TabsAdapter extends FragmentPagerAdapter implements ActionBar.TabLi
 	public int getCount() {
 		return mTabs.size();
 	}
-	
+
 	public TabInfo getTag(int position) {
 		return mTabs.get(position);
 	}
-
 
 }

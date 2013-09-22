@@ -4,7 +4,6 @@
 	<comment></comment>
 	<projects>
 		<project>actionbarsherlock</project>
-		<project>android-uitableview</project>
 		<project>ViewPagerIndicator</project>
 	</projects>
 	<buildSpec>

@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry kind="lib" path="C:/Users/Vinnymac/Dropbox/Github/JARS/xchange-1.6.0/xchange-bitcoincharts-1.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vinnymac/Dropbox/Github/JARS/xchange-1.6.0/xchange-bitstamp-1.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vinnymac/Dropbox/Github/JARS/xchange-1.6.0/xchange-btce-1.6.0.jar"/>
@@ -14,7 +14,7 @@
 	<classpathentry kind="lib" path="C:/Users/Vinnymac/Dropbox/Github/JARS/xchange-1.6.0/xchange-mtgox-1.6.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/Vinnymac/Dropbox/Github/JARS/xchange-1.6.0/xchange-openexchangerates-1.6.0.jar"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/actionbarsherlock"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/android-uitableview"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/ViewPagerIndicator"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

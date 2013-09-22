@@ -10,8 +10,9 @@ import android.os.IBinder;
 import android.util.Log;
 
 public class BroadcastService extends Service {
-	private static final String TAG = "BroadcastService";
-	public static final String BROADCAST_ACTION = "com.websmithing.broadcasttest.displayevent";
+
+	public final static String TAG = BroadcastService.class.getSimpleName();
+	public static final String BROADCAST_ACTION = "com.vinnymac.bittool.broadcasttest";
 	private final Handler handler = new Handler();
 	Intent intent;
 	int counter = 0;
@@ -32,7 +33,7 @@ public class BroadcastService extends Service {
 
 	private Runnable sendUpdatesToUI = new Runnable() {
 		public void run() {
-			Tick data = update();
+			MarketSession data = update();
 			intent.putExtra("ticker", data);
 			DisplayLoggingInfo();
 			handler.postDelayed(this, 30000); // 30 seconds
@@ -58,15 +59,14 @@ public class BroadcastService extends Service {
 		super.onDestroy();
 	}
 
-	private Tick update() {
+	private MarketSession update() {
 
 		String[] markets = { "com.xeiam.xchange.mtgox.v1.MtGoxExchange",
 				"com.xeiam.xchange.btce.BTCEExchange",
 				"com.xeiam.xchange.bitstamp.BitstampExchange",
 				"com.xeiam.xchange.campbx.CampBXExchange" };
 
-		// Ticker data = new Ticker.TickerBuilder().build();
-		Tick data = new Tick("-1", "-1", "-1", "-1", "-1", "-1", "-1", "-1");
+		MarketSession data = new MarketSession();
 
 		try {
 			UpdateMarket xchange = new UpdateMarket();
@@ -79,7 +79,7 @@ public class BroadcastService extends Service {
 			e.printStackTrace();
 		}
 
-		Log.e("Market Response", data.toString());
+		Log.e(TAG, "Market Response: " + data.toString());
 
 		return data;
 	}

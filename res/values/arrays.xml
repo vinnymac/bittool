@@ -21,6 +21,12 @@
         <item name="bitstamp">bitstamp</item>
         <item name="campbx">campbx</item>
     </string-array>
+    <string-array name="exchangeClass">
+        <item>com.xeiam.xchange.mtgox.v1.MtGoxExchange</item>
+        <item>com.xeiam.xchange.btce.BTCEExchange</item>
+        <item>com.xeiam.xchange.bitstamp.BitstampExchange</item>
+        <item>com.xeiam.xchange.campbx.CampBXExchange</item>
+    </string-array>
     <string-array name="marketValues">
         <item name="0">0</item>
         <item name="1">1</item>
@@ -94,6 +100,18 @@
         <item name="EUR">EUR</item>
         <item name="GBP">GBP</item>
         <item name="CAD">CAD</item>
+    </string-array>
+    
+    <string-array name="attribution_labels">
+        <item>ActionbarSherlock</item>
+        <item>ViewPager Indicator</item>
+        <item>Xeiam Xchange</item>
+    </string-array>
+    
+    <string-array name="attribution_links">
+        <item>http://xeiam.com</item>
+        <item>http://actionbarsherlock.com/</item>
+        <item>http://viewpagerindicator.com/</item>
     </string-array>
 
 </resources>

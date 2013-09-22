@@ -2,11 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vinnymac.bittool"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="0.1" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="17" />
+        android:minSdkVersion="9"
+        android:targetSdkVersion="18" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -17,7 +17,7 @@
         android:label="@string/app_name"
         android:theme="@style/Theme.Gold" >
         <activity
-            android:name="com.vinnymac.bittool.Splash"
+            android:name="com.vinnymac.bittool.SplashActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -35,7 +35,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.vinnymac.bittool.About"
+            android:name="com.vinnymac.bittool.AboutActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.vinnymac.bittool.ABOUT" />
@@ -44,7 +44,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.vinnymac.bittool.QuickPref"
+            android:name="com.vinnymac.bittool.PreferenceActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.vinnymac.bittool.QUICKPREF" />

@@ -50,7 +50,7 @@
         android:paddingTop="5.0dip" >
 
         <Button
-            android:id="@+id/Btn1_id"
+            android:id="@+id/button_number_one"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
@@ -59,21 +59,21 @@
             android:text="1" />
 
         <Button
-            android:id="@+id/Btn2_id"
+            android:id="@+id/button_number_two"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn1_id"
+            android:layout_toRightOf="@id/button_number_one"
             android:layout_weight="1.0"
             android:onClick="btn2Clicked"
             android:text="2" />
 
         <Button
-            android:id="@+id/Btn3_id"
+            android:id="@+id/button_number_three"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn2_id"
+            android:layout_toRightOf="@id/button_number_two"
             android:layout_weight="1.0"
             android:onClick="btn3Clicked"
             android:text="3" />
@@ -92,7 +92,7 @@
         android:paddingTop="5.0dip" >
 
         <Button
-            android:id="@+id/Btn4_id"
+            android:id="@+id/button_number_four"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
@@ -101,21 +101,21 @@
             android:text="4" />
 
         <Button
-            android:id="@+id/Btn5_id"
+            android:id="@+id/button_number_five"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn4_id"
+            android:layout_toRightOf="@id/button_number_four"
             android:layout_weight="1.0"
             android:onClick="btn5Clicked"
             android:text="5" />
 
         <Button
-            android:id="@+id/Btn6_id"
+            android:id="@+id/button_number_six"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn5_id"
+            android:layout_toRightOf="@id/button_number_five"
             android:layout_weight="1.0"
             android:onClick="btn6Clicked"
             android:text="6" />
@@ -134,7 +134,7 @@
         android:paddingTop="5.0dip" >
 
         <Button
-            android:id="@+id/Btn7_id"
+            android:id="@+id/button_number_seven"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
@@ -143,21 +143,21 @@
             android:text="7" />
 
         <Button
-            android:id="@+id/Btn8_id"
+            android:id="@+id/button_number_eight"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn7_id"
+            android:layout_toRightOf="@id/button_number_seven"
             android:layout_weight="1.0"
             android:onClick="btn8Clicked"
             android:text="8" />
 
         <Button
-            android:id="@+id/Btn9_id"
+            android:id="@+id/button_number_nine"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn8_id"
+            android:layout_toRightOf="@id/button_number_eight"
             android:layout_weight="1.0"
             android:onClick="btn9Clicked"
             android:text="9" />
@@ -230,17 +230,17 @@
         android:paddingTop="5.0dip" >
 
         <Button
-            android:id="@+id/Btnclear_id"
+            android:id="@+id/button_clear"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
-            android:layout_toRightOf="@id/Btn9_id"
+            android:layout_toRightOf="@id/button_number_nine"
             android:layout_weight="1.0"
             android:onClick="btnclearClicked"
             android:text="C" />
 
         <Button
-            android:id="@+id/Btnzero_id"
+            android:id="@+id/button_number_zero"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
@@ -249,7 +249,7 @@
             android:text="0" />
 
         <Button
-            android:id="@+id/Btndot_id"
+            android:id="@+id/button_dot"
             android:layout_width="0.0dip"
             android:layout_height="fill_parent"
             android:layout_below="@id/tvResult_USD"
