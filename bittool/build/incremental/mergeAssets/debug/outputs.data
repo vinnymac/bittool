@@ -1,0 +1,6 @@
+# incremental data. DO NOT EDIT.
+# format is <lastModified> <length> <SHA-1> <path>
+# Encoding is UTF-8
+1387013573000 39420 6994b27b233a960c2aa724bca0abafbab233cecf /home/vinnymac/dev/adt-workspace/android-bittool/bittool/build/assets/debug/fonts/Bitter-Italic.ttf
+1387013573000 90628 d9b9d221716cab4ec5907a6e9ab4ece2f82c2c42 /home/vinnymac/dev/adt-workspace/android-bittool/bittool/build/assets/debug/fonts/Bitter-Regular.ttf
+1387013573000 25896 5fd27dfbd891646740a082f53da204826b80779e /home/vinnymac/dev/adt-workspace/android-bittool/bittool/build/assets/debug/fonts/Bitter-Bold.ttf

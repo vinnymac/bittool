@@ -1,0 +1,41 @@
+package com.getlua.lua.files;
+
+import android.view.View;
+import android.widget.ImageButton;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.getlua.lua.R;
+import com.getlua.lua.views.UploadStateView;
+
+public class FilesListViews {
+
+    public static final int LAYOUT_ID = R.layout.row_file;
+
+    public static FilesListViews get(View parent) {
+        FilesListViews v = (FilesListViews) parent.getTag(LAYOUT_ID);
+        if (v == null) {
+            v = new FilesListViews(parent);
+            parent.setTag(LAYOUT_ID, v);
+        }
+        return v;
+    }
+
+    public ImageView icon;
+    public TextView name;
+    public TextView creator;
+    public TextView role;
+    public TextView time;
+    public UploadStateView state;
+    public ImageView overflow;
+
+    protected FilesListViews(View parent) {
+    	icon = (ImageView) parent.findViewById(R.id.icon);
+    	name = (TextView) parent.findViewById(R.id.name);
+		creator = (TextView) parent.findViewById(R.id.creator_name);
+		role = (TextView) parent.findViewById(R.id.creator_role);    	
+    	time = (TextView) parent.findViewById(R.id.time);		
+		state = (UploadStateView) parent.findViewById(R.id.state);
+		overflow = (ImageView) parent.findViewById(R.id.overflow);
+    }
+}

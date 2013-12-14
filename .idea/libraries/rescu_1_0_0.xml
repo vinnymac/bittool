@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="rescu-1.0.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bittool/libs/rescu-1.0.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.github.mmazi/rescu/1.0.0/jar/ce4ca74281691d830473bb68489da59e0870dd74/rescu-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

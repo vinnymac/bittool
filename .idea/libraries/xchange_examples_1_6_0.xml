@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="xchange-examples-1.6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bittool/libs/xchange-examples-1.6.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.xeiam.xchange/xchange-examples/1.6.0/jar/588d02f12a4396428d88fbac0e1149ddaf15e1c3/xchange-examples-1.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="xchange-bitcoincharts-1.6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bittool/libs/xchange-bitcoincharts-1.6.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.xeiam.xchange/xchange-bitcoincharts/1.6.0/jar/8b7d98954551e6e82544dece42b5fe7a8b954026/xchange-bitcoincharts-1.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

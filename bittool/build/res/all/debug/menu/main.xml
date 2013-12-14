@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item
+        android:id="@+id/about"
+        android:orderInCategory="0"
+        android:showAsAction="never"
+        android:title="About">
+    </item>
+    <item
+        android:id="@+id/menu_settings"
+        android:orderInCategory="1"
+        android:showAsAction="never"
+        android:title="Settings">
+    </item>
+
+</menu><!-- From: file:/home/vinnymac/dev/adt-workspace/android-bittool/bittool/res/menu/main.xml -->

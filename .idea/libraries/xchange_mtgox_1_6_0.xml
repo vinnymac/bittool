@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="xchange-mtgox-1.6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bittool/libs/xchange-mtgox-1.6.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.xeiam.xchange/xchange-mtgox/1.6.0/jar/19a42da9dd90de06135f4aab065364c2cca5c9dd/xchange-mtgox-1.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

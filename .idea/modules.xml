@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/../ViewPagerIndicator/ViewPagerIndicator.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../actionbarsherlock/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/../actionbarsherlock/actionbarsherlock/actionbarsherlock.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../android-uitableview/android-uitableview.iml" filepath="$PROJECT_DIR$/../android-uitableview/android-uitableview.iml" />
-      <module fileurl="file://$PROJECT_DIR$/bittool.iml" filepath="$PROJECT_DIR$/bittool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" filepath="$PROJECT_DIR$/ViewPagerIndicator/ViewPagerIndicator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" filepath="$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/actionbarsherlock/actionbarsherlock/actionbarsherlock-actionbarsherlock.iml" filepath="$PROJECT_DIR$/actionbarsherlock/actionbarsherlock/actionbarsherlock-actionbarsherlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/android-bittool.iml" filepath="$PROJECT_DIR$/android-bittool.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bittool/bittool.iml" filepath="$PROJECT_DIR$/bittool/bittool.iml" />
     </modules>
   </component>
 </project>

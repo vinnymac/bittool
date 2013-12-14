@@ -1,0 +1,282 @@
+
+package com.getlua.lua.dialogs;
+
+import android.annotation.TargetApi;
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.res.Resources;
+import android.database.Cursor;
+import android.net.Uri;
+import android.os.Build;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.text.TextUtils;
+import android.view.ContextThemeWrapper;
+import android.view.View;
+import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListPopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+
+import com.actionbarsherlock.app.SherlockDialogFragment;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.getlua.lua.Config;
+import com.getlua.lua.ProjectSession;
+import com.getlua.lua.R;
+import com.getlua.lua.files.FilesDB;
+import com.getlua.lua.files.FilesListFragment;
+import com.getlua.lua.files.uploader.EditNameDialog;
+import com.getlua.lua.model.BooleanSqliteColumn;
+import com.getlua.lua.talk.ConversationListFragment.HideConversationListener;
+import com.getlua.lua.talk.TalkDB;
+
+import junit.framework.Assert;
+
+@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+public class ListMenuDialog implements OnDismissListener {
+    
+    private static final String TAG = ListMenuDialog.class.getSimpleName();
+    
+    private static final String DIALOG = "dialog";
+
+    // Files Menu Item Positions
+    private static final int ARCHIVE = 0;
+    private static final int DOWNLOAD = 1;
+    private static final int EDIT = 2;
+
+    // Talk Menu Item Positions
+    private static final int HIDE = 0;
+
+    private ListPopupWindow mListPopupWindow;
+
+    private AlertDialog mDialog;
+
+    /** An array of labels used to create the menu dialogs */
+    private String[] mLabels;
+
+    /** AlertDialogs title for <11 devices */
+    private String mTitle;
+
+    private ProjectSession mSession;
+    
+    private SherlockFragmentActivity mContext;
+
+    /** The controller for each tab. Requires a cast of the appropriate type. */
+    private Object mController;
+
+    /** The item id of the list item that the dialog is created from */
+    private long mId;
+    
+    private Cursor mCursor;
+    
+    /** The tab that displays this dialog */
+    private Tab mTab;
+
+    /** The AnchorView for ListPopupWindow dialog on >=11 devices */
+    private View mView;
+
+    public enum Tab {
+        PEOPLE,
+        TALK,
+        FILES
+    }
+
+    public ListMenuDialog(Context context, ProjectSession session, Object controller, long id,
+            Cursor cursor, Tab tab, View view) {
+        mContext = (SherlockFragmentActivity) context;
+        mSession = session;
+        mController = controller;
+        mId = id;
+        mCursor = cursor;
+        mTab = tab;
+        mView = view;
+        setStyle(); // sets the correct title/labels for the tab
+    }
+
+    public void show() {
+        if (Config.LOGGING) {
+            Assert.assertNotNull(mContext);
+            // session may be null
+            Assert.assertNotNull(mController);
+            Assert.assertTrue("ID set", (mId > 0));
+            Assert.assertNotNull(mCursor);
+            Assert.assertNotNull(mTab);
+            Assert.assertNotNull(mView);
+        }
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            showListPopupWindow();
+        } else {
+            showDialog();
+        }
+    }
+
+    private void showListPopupWindow() {
+        mListPopupWindow = new ListPopupWindow(mContext);
+        mListPopupWindow.setAdapter(new ArrayAdapter<String>(mContext,
+                android.R.layout.simple_spinner_dropdown_item, mLabels));
+        mListPopupWindow.setAnchorView(mView.findViewById(R.id.overflow));
+        mListPopupWindow.setWidth(225);
+        mListPopupWindow.setHeight(ListPopupWindow.WRAP_CONTENT);
+        mListPopupWindow.setModal(true);
+        mListPopupWindow.setOnDismissListener(this);
+        mListPopupWindow.setOnItemClickListener(new OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                onMenuClick(position);
+            }
+        });
+        mListPopupWindow.show();
+    }
+
+    private void showDialog() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(mContext,
+                R.style.LuaDialog));
+        builder.setTitle(mTitle);
+        builder.setItems(mLabels, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                onMenuClick(which);
+            }
+        });
+        mDialog = builder.create();
+        mDialog.show();
+    }
+
+    protected void showDialogFragment(SherlockDialogFragment dialog) {
+        FragmentTransaction ft = mContext.getSupportFragmentManager().beginTransaction();
+        Fragment prev = mContext.getSupportFragmentManager().findFragmentByTag(DIALOG);
+        if (prev != null) {
+            ft.remove(prev);
+        }
+        dialog.show(ft, DIALOG);
+    }
+
+    private void onMenuClick(int which) {
+        switch (mTab) {
+            case PEOPLE:
+                onPeopleMenuClick(which);
+                break;
+            case TALK:
+                onTalkMenuClick(which);
+                break;
+            case FILES:
+                onFileMenuClick(which);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Tab " + mTab);
+        }
+        // Dismiss the dialog after a selection is made
+        onDismiss();
+    }
+
+    private void setStyle() {
+        Resources res = mContext.getResources();
+        switch (mTab) {
+            case PEOPLE:
+                // People Tab List Style
+                break;
+            case TALK:
+                mTitle = res.getString(R.string.conversation_menu);
+                mLabels = res.getStringArray(R.array.conversation_list_menu_labels);
+                break;
+            case FILES:
+                mTitle = res.getString(R.string.files_menu);
+                
+                // Cannot edit name on files a user does not own
+                if(mCursor.getLong(FilesDB.Upload.IDX_LIST_CREATOR_ID) == mSession.getMemberId()) {
+                    mLabels = res.getStringArray(R.array.files_list_menu_labels1);
+                } else {
+                    mLabels = res.getStringArray(R.array.files_list_menu_labels2);
+                }
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Tab " + mTab);
+        }
+    }
+
+    private void onPeopleMenuClick(int which) {
+        switch (which) {
+            default:
+                throw new IllegalArgumentException("Unknown Menu Option " + which);
+        }
+    }
+
+    private void onTalkMenuClick(int which) {
+        HideConversationListener conversationListener = ((HideConversationListener) mController);
+        switch (which) {
+            case HIDE:
+                long projectId = mCursor.getLong(mCursor
+                        .getColumnIndexOrThrow(TalkDB.Conversation.COLUMN_NAME_PROJECT_ID));
+                long conversationId = mCursor.getLong(mCursor
+                        .getColumnIndexOrThrow(TalkDB.Conversation.COLUMN_NAME_CONVERSATION_ID));
+                String title = mCursor.getString(mCursor
+                        .getColumnIndexOrThrow(TalkDB.Conversation.COLUMN_NAME_NAME));
+                if (BooleanSqliteColumn
+                        .isFalse(mCursor.getString(mCursor
+                                .getColumnIndexOrThrow(TalkDB.Conversation.COLUMN_NAME_BLAST)))) {
+                    conversationListener.hideConversation(title, projectId, conversationId);
+                }
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Menu Option " + which);
+        }
+    }
+
+    private void onFileMenuClick(int which) {
+        FilesListFragment.IUploadController uploadController = ((FilesListFragment.IUploadController) mController);
+        long uploadId = mCursor.getLong(FilesDB.Upload.IDX_LIST_ID);
+        long projectId = mCursor.getLong(FilesDB.Upload.IDX_LIST_PROJECT_ID);
+        String filename = mCursor.getString(FilesDB.Upload.IDX_LIST_FILENAME);
+        switch (which) {
+            case ARCHIVE:
+                // Add way to Archive Files
+                uploadController.archiveUpload(filename, projectId, uploadId);
+                break;
+            case DOWNLOAD:
+                String state = mCursor.getString(FilesDB.Upload.IDX_LIST_STATE);
+                if (state.equals(FilesDB.Upload.STATE_UPLOADING)) {
+                    // don't do anything for uploading or processing
+                } else if (TextUtils.equals(state, FilesDB.Upload.STATE_FAILED)) {
+                    // allow deleting a failed file upload
+                    String[] selectionArgs = {
+                            Long.toString(projectId), Long.toString(uploadId)
+                    };
+                    mContext.getContentResolver().delete(FilesDB.Upload.CONTENT_URI,
+                            FilesDB.Upload.SELECTION_UPLOAD,
+                            selectionArgs);
+                } else {
+                    // download and open the file for all other states
+                    Uri.Builder builder = FilesDB.Upload.CONTENT_ID_URI_BASE.buildUpon();
+                    builder.appendPath(Long.toString(mId));
+                    String localUri = mCursor.getString(FilesDB.Upload.IDX_LIST_LOCAL_FILE_URI);
+                    String extension = mCursor.getString(FilesDB.Upload.IDX_LIST_EXTENSION);
+                    String mimeType = mCursor.getString(FilesDB.Upload.IDX_LIST_CONTENT_TYPE);
+                    if (extension.length() == 0) {
+                        extension = MimeTypeMap.getSingleton().getExtensionFromMimeType(mimeType);
+                    }
+                    uploadController.viewUpload(mSession, uploadId, filename, localUri);
+                }
+
+                break;
+            case EDIT:
+                EditNameDialog d = EditNameDialog.newInstance(mSession, uploadId);
+                showDialogFragment(d);
+                break;
+            default:
+                throw new IllegalArgumentException("Unknown Menu Option " + which);
+        }
+    }
+
+    @Override
+    public void onDismiss() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+            mListPopupWindow.dismiss();
+        } else {
+            // Dismiss Alert Dialog for < 11 API
+            mDialog.dismiss();
+        }
+    }
+}

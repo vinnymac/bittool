@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="joda-money-0.8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bittool/libs/joda-money-0.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="xchange-cavirtex-1.6.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bittool/libs/xchange-cavirtex-1.6.0.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/artifacts-26/filestore/com.xeiam.xchange/xchange-cavirtex/1.6.0/jar/83b1ad216bfbd3d641f73e2082625ceb11bd343d/xchange-cavirtex-1.6.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

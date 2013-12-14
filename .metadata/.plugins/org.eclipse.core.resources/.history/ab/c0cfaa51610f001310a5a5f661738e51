@@ -1,0 +1,157 @@
+package com.getlua.lua.files;
+
+
+import java.util.Locale;
+
+import junit.framework.Assert;
+import android.annotation.SuppressLint;
+import android.content.Context;
+import android.database.Cursor;
+import android.graphics.Color;
+import android.os.Build;
+import android.support.v4.widget.ResourceCursorAdapter;
+import android.text.TextUtils;
+import android.view.View;
+import android.view.View.OnClickListener;
+
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.getlua.lua.ProjectSession;
+import android.view.ContextMenu;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.ListPopupWindow;
+import android.widget.PopupWindow.OnDismissListener;
+import android.widget.Toast;
+
+import com.getlua.lua.R;
+import com.getlua.lua.dialogs.ListMenuDialog;
+import com.getlua.lua.files.FilesListFragment.IUploadController;
+import com.getlua.lua.helpers.ColorUtil;
+import com.getlua.lua.helpers.FileTypeHelper;
+import com.getlua.lua.helpers.ImageHelper;
+import com.getlua.lua.helpers.ImageType;
+import com.getlua.lua.helpers.TimeHelper;
+import com.nostra13.universalimageloader.core.ImageLoader;
+
+import junit.framework.Assert;
+
+import java.util.Locale;
+
+public class FilesListCursorAdapter extends ResourceCursorAdapter implements OnClickListener {
+
+    private SherlockFragmentActivity mContext;
+
+    private int mPosition;
+
+    private FilesListFragment.IUploadController mController;
+
+    private ProjectSession mSession;
+
+    public FilesListCursorAdapter(IUploadController controller, ProjectSession session, Context context, Cursor c, int flags){
+        super(context, FilesListViews.LAYOUT_ID, c, flags);
+        mContext = (SherlockFragmentActivity) context;
+        mSession = session;
+        mController = controller;
+    }
+
+    private static final String image = "image";
+
+    @Override
+    public void bindView(View view, Context cxt, Cursor c) {
+
+        FilesListViews v = FilesListViews.get(view);
+
+        String state = c.getString(FilesDB.Upload.IDX_LIST_STATE); 
+
+        Assert.assertNotNull("iconView", v.icon);
+        String contentType = c.getString(FilesDB.Upload.IDX_LIST_CONTENT_TYPE);
+        String imageUrl = c.getString(FilesDB.Upload.IDX_LIST_ICON);
+        int defaultIcon = FileTypeHelper.getDrawableForContentType(contentType);
+
+        if(TextUtils.equals(state, FilesDB.Upload.STATE_UPLOADING)){
+            v.icon.setImageResource(R.drawable.file_icon_other);
+        } else if(TextUtils.isEmpty(imageUrl)) {
+            v.icon.setImageResource(defaultIcon);
+        } else if(contentType.toLowerCase(Locale.US).contains(image)){
+            ImageLoader.getInstance().displayImage(imageUrl, v.icon, ImageHelper.getDisplayOptions(ImageType.FILES_LIST));
+        } else {
+            v.icon.setImageResource(defaultIcon);
+        }
+
+        String name = c.getString(FilesDB.Upload.IDX_LIST_NAME);
+        if(!TextUtils.isEmpty(name) && v.name != null) {
+            v.name.setText(name);
+        }
+
+        String read = c.getString(FilesDB.Upload.IDX_LIST_READ);
+        if(!TextUtils.isEmpty(read) && v.name != null) {
+            if (TextUtils.equals(read, "true")) {
+                v.name.setCompoundDrawables(null, null, null, null);
+            } else {
+                v.name.setCompoundDrawablesWithIntrinsicBounds(cxt.getResources().getDrawable(R.drawable.unread_dot), null, null, null);
+            }
+        }
+
+        String creatorName = c.getString(FilesDB.Upload.IDX_LIST_CREATOR_NAME);
+        if(!TextUtils.isEmpty(creatorName) && v.creator != null) {
+            v.creator.setText(creatorName);
+        }
+
+        int deptColor = ColorUtil.parseColor(c.getString(FilesDB.Upload.IDX_LIST_CREATOR_DEPTARTMENT_COLOR), Color.BLACK);
+        String creatorRole = c.getString(FilesDB.Upload.IDX_LIST_CREATOR_ROLE);
+        if(!TextUtils.isEmpty(creatorRole) && v.role != null) {
+            v.role.setText(creatorRole);
+            v.role.setTextColor(deptColor);
+        }
+
+        String rawTime = c.getString(FilesDB.Upload.IDX_LIST_CREATED_AT);
+        if (!TextUtils.isEmpty(rawTime) && !TextUtils.equals("null", rawTime) && v.time != null) {
+            /*
+             * FIXME: Probably could be better optimized
+             */
+            v.time.setText(TimeHelper.newFuzzyDateFormatter(rawTime));
+        }
+
+        if(!TextUtils.isEmpty(state) && v.state != null) {
+            if(TextUtils.equals(state, FilesDB.Upload.STATE_UPLOADING)) {
+                v.time.setVisibility(View.INVISIBLE);
+                view.setBackgroundResource(R.drawable.background_file_processing_row);
+                v.state.setUploading();
+            } else if (TextUtils.equals(state, FilesDB.Upload.STATE_FAILED)) {
+                v.time.setVisibility(View.INVISIBLE);
+                view.setBackgroundResource(R.drawable.background_file_processing_row);
+                v.state.setFailed();
+            } else {
+                v.time.setVisibility(View.VISIBLE);
+                view.setBackgroundResource(R.drawable.background_list_row);
+                if(TextUtils.equals(state, FilesDB.Upload.STATE_PRIVATE)) {
+                    v.state.setPrivate();
+                } else if (TextUtils.equals(state, FilesDB.Upload.STATE_PUBLISHED)) {
+                    v.state.setPublished();
+                } else if (TextUtils.equals(state, FilesDB.Upload.STATE_SHARED)) {
+                    //using a string because getting an int from a null column is an unspeced failure, depends
+                    //on specific platform implementation
+                    String count = c.getString(FilesDB.Upload.IDX_LIST_RECIPIENT_COUNT);
+                    if (!TextUtils.isEmpty(count)) {
+                        v.state.setShared(Integer.parseInt(count));
+                    } else {
+                        v.state.setShared(0);
+                    }
+                } 
+            }
+        }
+
+        v.overflow.setOnClickListener(this);
+        v.overflow.setTag(c.getPosition());
+    }
+
+    @Override
+    public void onClick(View v) {
+        mPosition = (Integer) v.getTag();
+        ListMenuDialog lmd = new ListMenuDialog(mContext, mSession, mController, getItemId(mPosition), (Cursor) getItem(mPosition), ListMenuDialog.Tab.FILES, v);
+        lmd.show();
+    }
+}
