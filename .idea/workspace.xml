@@ -69,46 +69,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="23" selection-start="1778" selection-end="1778" vertical-scroll-proportion="-15.2" vertical-offset="400" max-vertical-offset="1275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.properties" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bittool/project.properties">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="34" selection-start="360" selection-end="360" vertical-scroll-proportion="0.2195122" vertical-offset="0" max-vertical-offset="615">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
+            <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1875">
               <folding />
             </state>
           </provider>
@@ -117,7 +81,16 @@
       <file leaf-file-name="UpdateMarket.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1035">
+            <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bittool/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="16" selection-start="295" selection-end="295" vertical-scroll-proportion="0.5481728" vertical-offset="0" max-vertical-offset="900">
               <folding />
             </state>
           </provider>
@@ -1276,12 +1249,13 @@
       <list>
         <option value="$PROJECT_DIR$/bittool/res/values-v14/styles.xml" />
         <option value="$PROJECT_DIR$/bittool/res/values/styles_gold.xml" />
-        <option value="$PROJECT_DIR$/bittool/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/bittool/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java" />
         <option value="$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/Xchange.java" />
         <option value="$PROJECT_DIR$/bittool/build.gradle" />
         <option value="$PROJECT_DIR$/bittool/project.properties" />
+        <option value="$PROJECT_DIR$/bittool/res/values/styles.xml" />
+        <option value="$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java" />
+        <option value="$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java" />
         <option value="$PROJECT_DIR$/bittool/.gitignore" />
       </list>
     </option>
@@ -1482,28 +1456,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="android-bittool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android-bittool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slf4j-api-1.7.5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="slf4j-api-1.7.5.jar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -1905,13 +1857,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles_gold.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="12" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1275">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
@@ -2184,27 +2129,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="488" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1035">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/Xchange.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="34" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
@@ -2219,13 +2143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.024875622" vertical-offset="0" max-vertical-offset="603">
@@ -2233,23 +2150,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="34" selection-start="360" selection-end="360" vertical-scroll-proportion="0.2195122" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="23" selection-start="1778" selection-end="1778" vertical-scroll-proportion="-15.2" vertical-offset="400" max-vertical-offset="1275">
+        <state line="52" column="23" selection-start="1778" selection-end="1778" vertical-scroll-proportion="0.63018245" vertical-offset="400" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.45382166" vertical-offset="0" max-vertical-offset="628">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/actionbarsherlock/actionbarsherlock.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="1875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bittool/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.477707" vertical-offset="0" max-vertical-offset="628">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/project.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="360" selection-end="360" vertical-scroll-proportion="0.2195122" vertical-offset="0" max-vertical-offset="615">
+        <state line="22" column="16" selection-start="295" selection-end="295" vertical-scroll-proportion="0.5481728" vertical-offset="0" max-vertical-offset="900">
           <folding />
         </state>
       </provider>
