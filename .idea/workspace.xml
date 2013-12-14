@@ -6,548 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b092eed0-eae6-4414-835c-a2e18bbe5734" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/Bittool.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/viewpageindicator/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/actionbarsherlock-ce76c59ff61837810390a84ac5971f1e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/android-support-v4-aa289b8d31b98eaa5e2f370ebd5bb0ac.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/jackson-annotations-2.1.1-2bd85e3187dde0fd8c0bdfc34aa99122.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/jackson-core-2.1.1-e141d56ae3b77ca938080257a926bf46.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/jackson-databind-2.1.1-2056a9314a0a429afc67a4a5f8b62844.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/joda-money-0.8-449fa708d72fae877e2e6c5b6c3a73dd.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/jsr305-2.0.1-99937f3517b497b7df3b155b0b1c98e2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/jsr311-api-1.1.1-1c11a9570c86523d54970a46d4895eda.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/rescu-1.0.0-9be1ba72efdf6f89e24625c733259926.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/slf4j-android-1.6.1-RC1-4a64006f805806d672e2959da24685e1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/viewpagerindicator-6c3054ad207fd93ccb810ea0aef454c6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-bitcoincharts-1.6.0-f2f53ffd47e87e466faacdb263813db6.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-bitstamp-1.6.0-a8db409d41c2b6e05e8181a909d9cd2f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-btce-1.6.0-e479bfc276b52101730d3f7f7638f02f.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-campbx-1.6.0-97128766ddf4121f50392ac2d1da9e35.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-cavirtex-1.6.0-996ba7d9ed758de1d9b765e4a4088b4e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-core-1.6.0-ade6d27491f3496a619fb82f0040c21e.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-examples-1.6.0-797803e414a39db95088f269a2eaf84b.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-mtgox-1.6.0-4c132edc13f7932f84a3334bd4a7c7d0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/dexedLibs/xchange-openexchangerates-1.6.0-71fd26624c67efa49402cc5fc73027f0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/ab_bottom_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/ab_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/ab_stacked_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/ab_transparent_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/btn_cab_done_default_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/btn_cab_done_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/btn_cab_done_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/cab_background_bottom_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/cab_background_top_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_divider.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_selected.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_selected_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_selected_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_unselected.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_unselected_focused.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/custom_tab_indicator_unselected_pressed.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/list_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/menu_dropdown_panel_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/progress_bg_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/progress_primary_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/progress_secondary_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/qrcode.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/settings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/spinner_ab_default_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/spinner_ab_disabled_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/spinner_ab_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/spinner_ab_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/tab_selected_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/tab_selected_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/tab_selected_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/tab_unselected_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/tab_unselected_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-hdpi/thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/ab_bottom_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/ab_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/ab_stacked_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/ab_transparent_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/btn_cab_done_default_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/btn_cab_done_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/btn_cab_done_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/cab_background_bottom_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/cab_background_top_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/list_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/menu_dropdown_panel_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/progress_bg_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/progress_primary_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/progress_secondary_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/settings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/spinner_ab_default_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/spinner_ab_disabled_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/spinner_ab_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/spinner_ab_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/tab_selected_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/tab_selected_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/tab_selected_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/tab_unselected_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/tab_unselected_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-mdpi/thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/ab_bottom_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/ab_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/ab_stacked_solid_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/ab_transparent_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/btn_cab_done_default_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/btn_cab_done_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/btn_cab_done_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/cab_background_bottom_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/cab_background_top_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/down.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/equal.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/list_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/menu_dropdown_panel_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/progress_bg_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/progress_primary_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/progress_secondary_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/settings.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/spinner_ab_default_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/spinner_ab_disabled_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/spinner_ab_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/spinner_ab_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/splash_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/tab_selected_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/tab_selected_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/tab_selected_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/tab_unselected_focused_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/tab_unselected_pressed_gold.9.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xhdpi/up.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xxhdpi/ic_launcher.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xxhdpi/splash_background.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/res/drawable-xxhdpi/thumb.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bin/resources.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/bittool.iml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/gen/com/actionbarsherlock/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/gen/com/viewpageindicator/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/gen/com/vinnymac/bittool/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/android-support-v4.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/jackson-annotations-2.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/jackson-core-2.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/jackson-databind-2.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/joda-money-0.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/jsr305-2.0.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/jsr311-api-1.1.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/rescu-1.0.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/slf4j-android-1.6.1-RC1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-bitcoincharts-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-bitstamp-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-btce-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-campbx-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-cavirtex-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-core-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-examples-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-mtgox-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/libs/xchange-openexchangerates-1.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpageindicator/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/CirclePageIndicator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/CirclePageIndicator$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/CirclePageIndicator$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/CirclePageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/IconPageIndicator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/IconPageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/IconPagerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/IcsLinearLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/LinePageIndicator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/LinePageIndicator$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/LinePageIndicator$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/LinePageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/MainActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/PageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TabPageIndicator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TabPageIndicator$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TabPageIndicator$OnTabReselectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TabPageIndicator$TabView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TabPageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator$IndicatorStyle.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator$LinePosition.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator$OnCenterItemClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/TitlePageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/UnderlinePageIndicator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/UnderlinePageIndicator$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/UnderlinePageIndicator$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/UnderlinePageIndicator$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/ViewPagerIndicator/com/viewpagerindicator/UnderlinePageIndicator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock-i18n/com/actionbarsherlock/i18n/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/android/support/v4/app/Watson$OnCreateOptionsMenuListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/android/support/v4/app/Watson$OnOptionsItemSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/android/support/v4/app/Watson$OnPrepareOptionsMenuListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/android/support/v4/app/Watson.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$Implementation.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnActionModeFinishedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnActionModeStartedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnCreateOptionsMenuListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnCreatePanelMenuListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnMenuItemSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnOptionsItemSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnPrepareOptionsMenuListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock$OnPreparePanelListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/ActionBarSherlock.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/ActionBar$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/ActionBar$OnMenuVisibilityListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/ActionBar$OnNavigationListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/ActionBar$Tab.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/ActionBar$TabListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/ActionBar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockDialogFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockExpandableListActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockFragmentActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockListActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockListFragment.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/app/SherlockPreferenceActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ActionBarSherlockCompat$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ActionBarSherlockCompat$ActionModeCallbackWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ActionBarSherlockCompat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ActionBarSherlockNative$ActionModeCallbackWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ActionBarSherlockNative$ActionModeWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ActionBarSherlockNative.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/ResourcesCompat.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarImpl$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarImpl$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarImpl$ActionModeImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarImpl$TabImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarWrapper$TabWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/app/ActionBarWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/Animator$AnimatorListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/Animator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorListenerAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet$AnimatorSetListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet$Builder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet$Dependency.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet$DependencyListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet$Node.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/AnimatorSet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/FloatEvaluator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/FloatKeyframeSet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/IntEvaluator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/IntKeyframeSet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$FloatKeyframe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$IntKeyframe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe$ObjectKeyframe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/Keyframe.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/KeyframeSet.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ObjectAnimator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder$FloatPropertyValuesHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder$IntPropertyValuesHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/PropertyValuesHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/TypeEvaluator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$AnimationHandler.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator$AnimatorUpdateListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/animation/ValueAnimator.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/view/NineViewGroup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/view/animation/AnimatorProxy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/widget/NineFrameLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/widget/NineHorizontalScrollView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/nineoldandroids/widget/NineLinearLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/ActionProviderWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/StandaloneActionMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/View_HasStateListenerSupport.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/View_OnAttachStateChangeListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuItemView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$ActionButtonSubmenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$HasPermanentMenuKey.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OpenOverflowRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowMenuButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$OverflowPopup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$PopupPresenterCallback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuPresenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuView$ActionMenuChildView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuView$LayoutParams.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ActionMenuView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/BaseMenuPresenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/ListMenuItemView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuBuilder$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuBuilder$ItemInvoker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuItemImpl.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuItemWrapper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuItemWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuPopupHelper$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuPopupHelper$ExpandedIndexObserver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuPopupHelper$MenuAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuPopupHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuPresenter$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuPresenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuView$ItemView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/MenuWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/SubMenuBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/view/menu/SubMenuWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/AbsActionBarView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/AbsActionBarView$VisibilityAnimListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/AbsActionBarView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarContainer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarContextView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarContextView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$ExpandedActionViewMenuPresenter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$HomeView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ActionBarView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/CapitalizingButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/CapitalizingTextView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/CollapsibleActionViewWrapper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAbsSpinner$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAbsSpinner$RecycleBin.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAbsSpinner$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAbsSpinner$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAbsSpinner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView$AdapterContextMenuInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView$AdapterDataSetObserver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView$OnItemLongClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView$OnItemSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView$SelectionNotifier.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsAdapterView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsColorDrawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsLinearLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$DropDownListView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$ListSelectorHider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupDataSetObserver.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupScrollListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$PopupTouchInterceptor.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow$ResizePopupRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsListPopupWindow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsProgressBar$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsProgressBar$AccessibilityEventSender.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsProgressBar$RefreshProgressRunnable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsProgressBar$SavedState$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsProgressBar$SavedState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsProgressBar.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsSpinner$DropDownAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsSpinner$DropdownPopup$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsSpinner$DropdownPopup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsSpinner$SpinnerPopup.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsSpinner.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsToast.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/IcsView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ScrollingTabContainerView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ScrollingTabContainerView$TabAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ScrollingTabContainerView$TabClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ScrollingTabContainerView$TabView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ScrollingTabContainerView$VisibilityAnimListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/ScrollingTabContainerView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/internal/widget/TabsLinearLayout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/ActionMode$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/ActionMode.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/ActionProvider$SubUiVisibilityListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/ActionProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/CollapsibleActionView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/Menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/MenuInflater$InflatedOnMenuItemClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/MenuInflater$MenuState.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/MenuInflater.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/MenuItem$OnActionExpandListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/MenuItem$OnMenuItemClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/MenuItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/SubMenu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/Window$Callback.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/view/Window.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$ActivityChooserModelClient.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$ActivityResolveInfo.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$ActivitySorter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$DefaultSorter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$HistoricalRecord.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$HistoryLoader$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$HistoryLoader.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$HistoryPersister.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel$OnChooseActivityListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserModel.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView$ActivityChooserViewAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView$Callbacks.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView$SetActivated.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ActivityChooserView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$10.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$11.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$12.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$8.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$9.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$OnCloseListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$OnQueryTextListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$OnSuggestionListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView$SearchAutoComplete.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SearchView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ShareActionProvider$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ShareActionProvider$OnShareTargetSelectedListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ShareActionProvider$ShareAcitivityChooserModelPolicy.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/ShareActionProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SuggestionsAdapter$ChildViewCache.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/actionbarsherlock/com/actionbarsherlock/widget/SuggestionsAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/activity/UITableViewActivity.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/model/BasicItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/model/IListItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/model/ViewItem.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UIButton$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UIButton$ClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UIButton.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UITableView$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UITableView$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UITableView$ClickListener.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/android-uitableview/br/com/dina/ui/widget/UITableView.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/BuildConfig.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$array.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$bool.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$dimen.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$integer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$raw.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$styleable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/bittool/out/production/bittool/com/viewpageindicator/R.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/AboutActivity.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/AboutActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/AboutDialogFragment.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/AboutDialogFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/CalcFragment.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/CalcFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/MainActivity.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/MainActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/MarketFragment.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/MarketFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/NotifyDialog.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/NotifyDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/NotifyFragment.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/NotifyFragment.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$attr.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$attr.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$bool.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$bool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$bool.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$bool.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$color.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$color.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$dimen.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$dimen.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$dimen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$id.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$id.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$integer.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$integer.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$string.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$string.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$style.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$style.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$styleable.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/actionbarsherlock/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$styleable.class" afterPath="$PROJECT_DIR$/bittool/bin/classes/com/vinnymac/bittool/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/.classpath" afterPath="$PROJECT_DIR$/bittool/.classpath" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/AndroidManifest.xml" afterPath="$PROJECT_DIR$/bittool/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/R.txt" afterPath="$PROJECT_DIR$/bittool/bin/R.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/bin/jarlist.cache" afterPath="$PROJECT_DIR$/bittool/bin/jarlist.cache" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/project.properties" afterPath="$PROJECT_DIR$/bittool/project.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bittool/res/values/styles.xml" afterPath="$PROJECT_DIR$/bittool/res/values/styles.xml" />
-    </list>
+    <list default="true" id="b092eed0-eae6-4414-835c-a2e18bbe5734" name="Default" comment="" />
     <ignored path="android-bittool.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -610,15 +69,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="styles_gold.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bittool/res/values/styles_gold.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="12" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1275">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="styles.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -631,25 +81,25 @@
       <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="240">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.gradle" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/settings.gradle">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="build.gradle" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="build.gradle" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="43" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.88916254" vertical-offset="134" max-vertical-offset="1275">
+            <state line="52" column="23" selection-start="1778" selection-end="1778" vertical-scroll-proportion="-15.2" vertical-offset="400" max-vertical-offset="1275">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="project.properties" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bittool/project.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="13" column="16" selection-start="561" selection-end="561" vertical-scroll-proportion="0.31707317" vertical-offset="0" max-vertical-offset="615">
               <folding />
             </state>
           </provider>
@@ -658,7 +108,7 @@
       <file leaf-file-name="MainActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.09983361" vertical-offset="0" max-vertical-offset="1875">
+            <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
               <folding />
             </state>
           </provider>
@@ -667,7 +117,16 @@
       <file leaf-file-name="UpdateMarket.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="38" column="4" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="855">
+            <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1035">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Xchange.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/Xchange.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="34" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1050">
               <folding />
             </state>
           </provider>
@@ -685,7 +144,7 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bittool/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.12295082" vertical-offset="0" max-vertical-offset="930">
+            <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
               <folding />
             </state>
           </provider>
@@ -699,7 +158,7 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bittool" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GradleLocalSettings">
     <option name="tasksExpandState">
@@ -723,6 +182,21 @@
                   <option value="installDebug" />
                 </list>
               </option>
+              <option name="vmOptions" value="" />
+            </ExternalSystemSettings>
+          </option>
+        </ExternalTaskExecutionInfo>
+        <ExternalTaskExecutionInfo>
+          <option name="executorId" value="Run" />
+          <option name="settings">
+            <ExternalSystemSettings>
+              <option name="externalProjectPath" value="$PROJECT_DIR$" />
+              <option name="externalSystemIdString" value="GRADLE" />
+              <option name="taskNames">
+                <list>
+                  <option value="clean" />
+                </list>
+              </option>
             </ExternalSystemSettings>
           </option>
         </ExternalTaskExecutionInfo>
@@ -745,20 +219,6 @@
           <option name="settings">
             <ExternalSystemSettings>
               <option name="externalProjectPath" value="$PROJECT_DIR$/bittool" />
-              <option name="externalSystemIdString" value="GRADLE" />
-              <option name="taskNames">
-                <list>
-                  <option value="clean" />
-                </list>
-              </option>
-            </ExternalSystemSettings>
-          </option>
-        </ExternalTaskExecutionInfo>
-        <ExternalTaskExecutionInfo>
-          <option name="executorId" value="Run" />
-          <option name="settings">
-            <ExternalSystemSettings>
-              <option name="externalProjectPath" value="$PROJECT_DIR$" />
               <option name="externalSystemIdString" value="GRADLE" />
               <option name="taskNames">
                 <list>
@@ -1817,16 +1277,20 @@
         <option value="$PROJECT_DIR$/bittool/res/values-v14/styles.xml" />
         <option value="$PROJECT_DIR$/bittool/res/values/styles_gold.xml" />
         <option value="$PROJECT_DIR$/bittool/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/bittool/build.gradle" />
         <option value="$PROJECT_DIR$/bittool/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java" />
+        <option value="$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/Xchange.java" />
+        <option value="$PROJECT_DIR$/bittool/build.gradle" />
+        <option value="$PROJECT_DIR$/bittool/project.properties" />
+        <option value="$PROJECT_DIR$/bittool/.gitignore" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="-8" />
-    <option name="width" value="1922" />
-    <option name="height" value="1089" />
+    <option name="x" value="1919" />
+    <option name="y" value="22" />
+    <option name="width" value="1682" />
+    <option name="height" value="1059" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -2019,6 +1483,28 @@
               <option name="myItemId" value="android-bittool" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="android-bittool" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slf4j-api-1.7.5" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.NamedLibraryElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slf4j-api-1.7.5.jar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -2037,28 +1523,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="android-bittool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bittool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android-bittool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="android-bittool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bittool" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -2087,6 +1551,8 @@
     <property name="project.structure.proportion" value="0.1575" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="true" />
+    <property name="LayoutCode.rearrangeEntriesJava" value="false" />
+    <property name="ANDROID_EXTENDED_DEVICE_CHOOSER_SERIALS" value="R32CB04LS0L" />
   </component>
   <component name="RunManager" selected="Android Application.bittool">
     <configuration default="false" name="android-bittool [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
@@ -2221,6 +1687,19 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -2246,19 +1725,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -2348,9 +1814,9 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Gradle.android-bittool [installDebug]" />
-        <item index="1" class="java.lang.String" itemvalue="Gradle.android-bittool:bittool [installDebug]" />
-        <item index="2" class="java.lang.String" itemvalue="Gradle.android-bittool:bittool [clean]" />
-        <item index="3" class="java.lang.String" itemvalue="Gradle.android-bittool [clean]" />
+        <item index="1" class="java.lang.String" itemvalue="Gradle.android-bittool [clean]" />
+        <item index="2" class="java.lang.String" itemvalue="Gradle.android-bittool:bittool [installDebug]" />
+        <item index="3" class="java.lang.String" itemvalue="Gradle.android-bittool:bittool [clean]" />
         <item index="4" class="java.lang.String" itemvalue="Gradle.android-bittool:ViewPagerIndicator [packageDebugResources]" />
       </list>
     </recent_temporary>
@@ -2363,6 +1829,23 @@
     </configuration>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="b092eed0-eae6-4414-835c-a2e18bbe5734" name="Default" comment="" />
@@ -2372,8 +1855,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="-8" width="1922" height="1089" extended-state="6" />
-    <editor active="true" />
+    <frame x="1919" y="22" width="1682" height="1059" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -2385,17 +1868,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46137786" sideWeight="0.36979723" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.46137786" sideWeight="0.6302028" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32985386" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2379936" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47685683" sideWeight="0.36979723" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47634408" sideWeight="0.6302028" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29310346" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27233782" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32817504" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28914404" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26805386" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28879312" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2424,6 +1907,186 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bittool/res/values/styles_gold.xml">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="12" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="42" selection-start="792" selection-end="792" vertical-scroll-proportion="0.0" vertical-offset="405" max-vertical-offset="1260">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/Xchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values-v14/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="53" selection-start="269" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles_gold.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="12" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="4" selection-start="1113" selection-end="1113" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="31" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="855">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values-v14/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="53" selection-start="269" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles_gold.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="12" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" vertical-offset="735" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="12" selection-start="742" selection-end="742" vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="43" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="4" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="570" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values-v14/styles.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="53" selection-start="269" selection-end="293" vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="255">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/res/values/styles_gold.xml">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="57" column="12" selection-start="2971" selection-end="2971" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1275">
           <folding />
         </state>
@@ -2445,9 +2108,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-          <folding />
-        </state>
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
@@ -2530,6 +2191,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="2145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="22" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0" vertical-offset="133" max-vertical-offset="1035">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/Xchange.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="34" selection-start="95" selection-end="95" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="930">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="932">
@@ -2539,35 +2228,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/settings.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="105">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/UpdateMarket.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="38" column="4" selection-start="1154" selection-end="1154" vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="855">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/src/com/vinnymac/bittool/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="17" selection-start="471" selection-end="471" vertical-scroll-proportion="0.09983361" vertical-offset="0" max-vertical-offset="1875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bittool/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="31" selection-start="202" selection-end="202" vertical-scroll-proportion="0.12295082" vertical-offset="0" max-vertical-offset="930">
+        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.024875622" vertical-offset="0" max-vertical-offset="603">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bittool/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="43" selection-start="1007" selection-end="1007" vertical-scroll-proportion="0.88916254" vertical-offset="134" max-vertical-offset="1275">
+        <state line="52" column="23" selection-start="1778" selection-end="1778" vertical-scroll-proportion="-15.2" vertical-offset="400" max-vertical-offset="1275">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="0" selection-start="231" selection-end="231" vertical-scroll-proportion="0.477707" vertical-offset="0" max-vertical-offset="628">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bittool/project.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="16" selection-start="561" selection-end="561" vertical-scroll-proportion="0.31707317" vertical-offset="0" max-vertical-offset="615">
           <folding />
         </state>
       </provider>
