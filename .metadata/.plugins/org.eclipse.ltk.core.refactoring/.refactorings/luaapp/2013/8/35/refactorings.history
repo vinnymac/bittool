@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring accessors="true" comment="Delete element from project &apos;luaapp&apos;&#x0A;- Original project: &apos;luaapp&apos;&#x0A;- Original element: &apos;row_file.xml.orig&apos;" description="Delete element" element1="res/layout/row_file.xml.orig" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1377652266861" subPackages="false" version="1.0"/>
-</session>
